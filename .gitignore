@@ -109,6 +109,8 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+# Custom
+cura/
 
 # Spyder project settings
 .spyderproject
