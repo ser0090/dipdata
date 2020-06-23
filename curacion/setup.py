@@ -19,6 +19,7 @@ setup(
         'matplotlib',
         'seaborn',
         'jupyterlab',
-        'ftfy<5.6'
+        'ftfy<5.6',
+        'networkx'
     ]
 )
