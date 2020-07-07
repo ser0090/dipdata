@@ -20,6 +20,7 @@ setup(
         'seaborn',
         'jupyterlab',
         'ftfy<5.6',
-        'networkx'
+        'networkx',
+        'scikit-learn'
     ]
 )
