@@ -21,6 +21,8 @@ setup(
         'jupyterlab',
         'ftfy<5.6',
         'networkx',
-        'scikit-learn'
+        'scikit-learn',
+        'feedparser',
+        'slugify'
     ]
 )
