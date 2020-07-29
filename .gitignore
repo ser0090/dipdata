@@ -136,3 +136,4 @@ dmypy.json
 # Data
 *.csv
 *.pickle
+iml/
