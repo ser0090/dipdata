@@ -22,6 +22,9 @@ en este mismo directorio pueden ejecutar jupyter para abrir las notebooks:
 ```
 $ jupyter notebook
 ```
+blog
+
+crscardellino.github.io
 
 ## Slides de las clases
 
