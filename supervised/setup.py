@@ -21,6 +21,7 @@ setup(
         'pandas',
         'seaborn',
         'scipy',
-        'Keras'
+        'tensorflow',
+        'Keras',
     ]
 )
