@@ -21,7 +21,7 @@ setup(
         'pandas',
         'seaborn',
         'scipy',
-        'tensorflow',
-        'Keras',
+        'category_encoders',
+        'xgboost'
     ]
 )
