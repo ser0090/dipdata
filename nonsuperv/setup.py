@@ -25,5 +25,6 @@ setup(
         'ipywidgets',
         'widgetsnbextension',
         'plotly',
+        'scikit-learn'
     ]
 )
