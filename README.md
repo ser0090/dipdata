@@ -15,6 +15,26 @@ Diplomatura en Ciencia de Datos, Aprendizaje Automático y sus Aplicaciones
 * [Supervised Learning](supervised/README.md)
 * [Unsupervised Learning](unsupervised/README.md)
 
+### Supervised Learning
+
+Prediction Competition Walmart Recruiting: Trip Type Classification in 
+[diplodatos 2020](https://www.kaggle.com/c/supervisado2020/overview),
+
+ * Team     26 
+ * Score   `0.71833`
+ * [Notebook](supervised/notebooks/baseline.ipynb)
+
+### Unsupervised Learning
+
+FIFA 20 complete player dataset [kaggle](https://www.kaggle.com/stefanoleone992/fifa-20-complete-player-dataset)
+
+Clustering using 
+ * `k means`
+ * `dbscan`
+ * `mean shift`
+ * [Notebook](unsupervised/notebooks/clustering_fifa_20.ipynb)
+ 
+ 
 ## License
 Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
 
