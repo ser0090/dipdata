@@ -15,6 +15,19 @@ Diplomatura en Ciencia de Datos, Aprendizaje Automático y sus Aplicaciones
 * [Supervised Learning](supervised/README.md)
 * [Unsupervised Learning](unsupervised/README.md)
 
+### Data visualization
+Data analytics and visualization on The [Human Freedom Index - 2019](https://www.cato.org/human-freedom-index-new)
+ * [Notebook](https://github.com/ser0090/dipdata/blob/master/analisisvis/notebooks/practico.ipynb)
+
+### Introduction to Machine Learning
+Linear Regression on Boston Housing Dataset
+ * [Notebook](https://github.com/ser0090/dipdata/blob/master/introml/notebooks/Lab_1.ipynb)
+
+Cross-validated grid-search on Loan Dataset where 
+TARGET Label: 1 = client defaulted on loan - 0 = loan repaid
+ * [Notebook](https://github.com/ser0090/dipdata/blob/master/introml/notebooks/Lab_2.ipynb)
+
+
 ### Supervised Learning
 
 Prediction Competition Walmart Recruiting: Trip Type Classification in 
