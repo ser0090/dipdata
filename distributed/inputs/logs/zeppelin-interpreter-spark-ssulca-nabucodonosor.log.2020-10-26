@@ -1,0 +1,129 @@
+ INFO [2020-10-26 23:25:15,550] ({main} RemoteInterpreterServer.java[main]:261) - URL:jar:file:/users/ssulca/diplodatos_bigdata/spark/zeppelin-0.8.2-bin-all/interpreter/spark/spark-interpreter-0.8.2.jar!/org/apache/zeppelin/interpreter/remote/RemoteInterpreterServer.class
+ INFO [2020-10-26 23:25:15,610] ({main} RemoteInterpreterServer.java[<init>]:162) - Launching ThriftServer at 200.16.29.165:43493
+ INFO [2020-10-26 23:25:15,618] ({main} RemoteInterpreterServer.java[<init>]:166) - Starting remote interpreter server on port 43493
+ INFO [2020-10-26 23:25:15,620] ({Thread-0} RemoteInterpreterServer.java[run]:203) - Starting remote interpreter server on port 43493
+ INFO [2020-10-26 23:25:16,634] ({Thread-1} RemoteInterpreterUtils.java[registerInterpreter]:165) - callbackHost: 200.16.29.165, callbackPort: 37737, callbackInfo: CallbackInfo(host:200.16.29.165, port:43493)
+ INFO [2020-10-26 23:25:16,878] ({pool-1-thread-1} RemoteInterpreterServer.java[createInterpreter]:311) - Instantiate interpreter org.apache.zeppelin.spark.SparkInterpreter
+ INFO [2020-10-26 23:25:16,881] ({pool-1-thread-1} RemoteInterpreterServer.java[createInterpreter]:311) - Instantiate interpreter org.apache.zeppelin.spark.SparkSqlInterpreter
+ INFO [2020-10-26 23:25:16,890] ({pool-1-thread-1} RemoteInterpreterServer.java[createInterpreter]:311) - Instantiate interpreter org.apache.zeppelin.spark.DepInterpreter
+ INFO [2020-10-26 23:25:16,904] ({pool-1-thread-1} RemoteInterpreterServer.java[createInterpreter]:311) - Instantiate interpreter org.apache.zeppelin.spark.PySparkInterpreter
+ INFO [2020-10-26 23:25:16,909] ({pool-1-thread-1} RemoteInterpreterServer.java[createInterpreter]:311) - Instantiate interpreter org.apache.zeppelin.spark.IPySparkInterpreter
+ INFO [2020-10-26 23:25:16,912] ({pool-1-thread-1} RemoteInterpreterServer.java[createInterpreter]:311) - Instantiate interpreter org.apache.zeppelin.spark.SparkRInterpreter
+ INFO [2020-10-26 23:25:17,007] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:121) - Load configuration from file:/users/ssulca/diplodatos_bigdata/spark/zeppelin-0.8.2-bin-all/zeppelin-site.xml
+ WARN [2020-10-26 23:25:17,092] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:124) - Failed to load configuration from file:/users/ssulca/diplodatos_bigdata/spark/zeppelin-0.8.2-bin-all/zeppelin-site.xml proceeding with a default
+org.apache.commons.configuration.ConfigurationException: Error parsing file:/users/ssulca/diplodatos_bigdata/spark/zeppelin-0.8.2-bin-all/zeppelin-site.xml
+	at org.apache.commons.configuration.XMLConfiguration.load(XMLConfiguration.java:950)
+	at org.apache.commons.configuration.XMLConfiguration.load(XMLConfiguration.java:908)
+	at org.apache.commons.configuration.XMLConfiguration$XMLFileConfigurationDelegate.load(XMLConfiguration.java:1583)
+	at org.apache.commons.configuration.AbstractFileConfiguration.load(AbstractFileConfiguration.java:324)
+	at org.apache.commons.configuration.AbstractHierarchicalFileConfiguration.load(AbstractHierarchicalFileConfiguration.java:199)
+	at org.apache.zeppelin.conf.ZeppelinConfiguration.<init>(ZeppelinConfiguration.java:52)
+	at org.apache.zeppelin.conf.ZeppelinConfiguration.create(ZeppelinConfiguration.java:122)
+	at org.apache.zeppelin.scheduler.SchedulerFactory.<init>(SchedulerFactory.java:56)
+	at org.apache.zeppelin.scheduler.SchedulerFactory.singleton(SchedulerFactory.java:45)
+	at org.apache.zeppelin.interpreter.Interpreter.getScheduler(Interpreter.java:177)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.getScheduler(LazyOpenInterpreter.java:131)
+	at org.apache.zeppelin.interpreter.remote.RemoteInterpreterServer.interpret(RemoteInterpreterServer.java:431)
+	at org.apache.zeppelin.interpreter.thrift.RemoteInterpreterService$Processor$interpret.getResult(RemoteInterpreterService.java:1859)
+	at org.apache.zeppelin.interpreter.thrift.RemoteInterpreterService$Processor$interpret.getResult(RemoteInterpreterService.java:1844)
+	at org.apache.thrift.ProcessFunction.process(ProcessFunction.java:39)
+	at org.apache.thrift.TBaseProcessor.process(TBaseProcessor.java:39)
+	at org.apache.thrift.server.TThreadPoolServer$WorkerProcess.run(TThreadPoolServer.java:285)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.xml.sax.SAXParseException; Premature end of file.
+	at org.apache.xerces.parsers.DOMParser.parse(Unknown Source)
+	at org.apache.xerces.jaxp.DocumentBuilderImpl.parse(Unknown Source)
+	at org.apache.commons.configuration.XMLConfiguration.load(XMLConfiguration.java:942)
+	... 19 more
+ INFO [2020-10-26 23:25:17,113] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:129) - Server Host: 127.0.0.1
+ INFO [2020-10-26 23:25:17,114] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:131) - Server Port: 9322
+ INFO [2020-10-26 23:25:17,114] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:135) - Context Path: /
+ INFO [2020-10-26 23:25:17,116] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:136) - Zeppelin Version: 0.8.2
+ INFO [2020-10-26 23:25:17,116] ({pool-1-thread-1} SchedulerFactory.java[<init>]:59) - Scheduler Thread Pool Size: 100
+ INFO [2020-10-26 23:25:17,122] ({pool-2-thread-2} SchedulerFactory.java[jobStarted]:114) - Job 20201023-001936_119304475 started by scheduler interpreter_1406437594
+ INFO [2020-10-26 23:25:17,858] ({pool-2-thread-2} PySparkInterpreter.java[open]:140) - IPython is not available, use the native PySparkInterpreter
+
+ INFO [2020-10-26 23:25:17,866] ({pool-2-thread-2} PySparkInterpreter.java[createPythonScript]:118) - File /tmp/zeppelin_pyspark-1000806481373574967.py created
+ INFO [2020-10-26 23:25:17,917] ({pool-2-thread-2} NewSparkInterpreter.java[open]:83) - Using Scala Version: 2.11
+ INFO [2020-10-26 23:25:21,613] ({pool-2-thread-2} Logging.scala[logInfo]:54) - Running Spark version 2.2.1
+ WARN [2020-10-26 23:25:21,776] ({pool-2-thread-2} NativeCodeLoader.java[<clinit>]:62) - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+ INFO [2020-10-26 23:25:21,878] ({pool-2-thread-2} Logging.scala[logInfo]:54) - Submitted application: Zeppelin
+ INFO [2020-10-26 23:25:21,892] ({pool-2-thread-2} Logging.scala[logInfo]:54) - Changing view acls to: ssulca
+ INFO [2020-10-26 23:25:21,892] ({pool-2-thread-2} Logging.scala[logInfo]:54) - Changing modify acls to: ssulca
+ INFO [2020-10-26 23:25:21,892] ({pool-2-thread-2} Logging.scala[logInfo]:54) - Changing view acls groups to: 
+ INFO [2020-10-26 23:25:21,893] ({pool-2-thread-2} Logging.scala[logInfo]:54) - Changing modify acls groups to: 
+ INFO [2020-10-26 23:25:21,893] ({pool-2-thread-2} Logging.scala[logInfo]:54) - SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(ssulca); groups with view permissions: Set(); users  with modify permissions: Set(ssulca); groups with modify permissions: Set()
+ INFO [2020-10-26 23:25:22,142] ({pool-2-thread-2} Logging.scala[logInfo]:54) - Successfully started service 'sparkDriver' on port 42913.
+ INFO [2020-10-26 23:25:22,159] ({pool-2-thread-2} Logging.scala[logInfo]:54) - Registering MapOutputTracker
+ INFO [2020-10-26 23:25:22,176] ({pool-2-thread-2} Logging.scala[logInfo]:54) - Registering BlockManagerMaster
+ INFO [2020-10-26 23:25:22,179] ({pool-2-thread-2} Logging.scala[logInfo]:54) - Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+ INFO [2020-10-26 23:25:22,180] ({pool-2-thread-2} Logging.scala[logInfo]:54) - BlockManagerMasterEndpoint up
+ INFO [2020-10-26 23:25:22,188] ({pool-2-thread-2} Logging.scala[logInfo]:54) - Created local directory at /tmp/blockmgr-40b28757-8bb4-4744-a9f8-42970e003bf4
+ INFO [2020-10-26 23:25:22,204] ({pool-2-thread-2} Logging.scala[logInfo]:54) - MemoryStore started with capacity 1458.6 MB
+ INFO [2020-10-26 23:25:22,244] ({pool-2-thread-2} Logging.scala[logInfo]:54) - Registering OutputCommitCoordinator
+ INFO [2020-10-26 23:25:22,312] ({pool-2-thread-2} Log.java[initialized]:192) - Logging initialized @7049ms
+ INFO [2020-10-26 23:25:22,371] ({pool-2-thread-2} Server.java[doStart]:345) - jetty-9.3.z-SNAPSHOT
+ INFO [2020-10-26 23:25:22,387] ({pool-2-thread-2} Server.java[doStart]:403) - Started @7125ms
+ WARN [2020-10-26 23:25:22,403] ({pool-2-thread-2} Logging.scala[logWarning]:66) - Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
+ INFO [2020-10-26 23:25:22,408] ({pool-2-thread-2} AbstractConnector.java[doStart]:270) - Started ServerConnector@4bcf1c04{HTTP/1.1,[http/1.1]}{0.0.0.0:4041}
+ INFO [2020-10-26 23:25:22,415] ({pool-2-thread-2} Logging.scala[logInfo]:54) - Successfully started service 'SparkUI' on port 4041.
+ INFO [2020-10-26 23:25:22,441] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@e120f39{/jobs,null,AVAILABLE,@Spark}
+ INFO [2020-10-26 23:25:22,442] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@38dd581d{/jobs/json,null,AVAILABLE,@Spark}
+ INFO [2020-10-26 23:25:22,442] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@38bcfdaf{/jobs/job,null,AVAILABLE,@Spark}
+ INFO [2020-10-26 23:25:22,443] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@3f958b52{/jobs/job/json,null,AVAILABLE,@Spark}
+ INFO [2020-10-26 23:25:22,444] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@5393961f{/stages,null,AVAILABLE,@Spark}
+ INFO [2020-10-26 23:25:22,444] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@5cddc1ee{/stages/json,null,AVAILABLE,@Spark}
+ INFO [2020-10-26 23:25:22,445] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@29545c41{/stages/stage,null,AVAILABLE,@Spark}
+ INFO [2020-10-26 23:25:22,446] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@715cf490{/stages/stage/json,null,AVAILABLE,@Spark}
+ INFO [2020-10-26 23:25:22,447] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@40799b3a{/stages/pool,null,AVAILABLE,@Spark}
+ INFO [2020-10-26 23:25:22,448] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@24ca670d{/stages/pool/json,null,AVAILABLE,@Spark}
+ INFO [2020-10-26 23:25:22,448] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@279741a{/storage,null,AVAILABLE,@Spark}
+ INFO [2020-10-26 23:25:22,449] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@60a0471b{/storage/json,null,AVAILABLE,@Spark}
+ INFO [2020-10-26 23:25:22,450] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@b321852{/storage/rdd,null,AVAILABLE,@Spark}
+ INFO [2020-10-26 23:25:22,450] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@5310aaa0{/storage/rdd/json,null,AVAILABLE,@Spark}
+ INFO [2020-10-26 23:25:22,451] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@19e5badc{/environment,null,AVAILABLE,@Spark}
+ INFO [2020-10-26 23:25:22,452] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@2b2008a6{/environment/json,null,AVAILABLE,@Spark}
+ INFO [2020-10-26 23:25:22,453] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@6b4f8910{/executors,null,AVAILABLE,@Spark}
+ INFO [2020-10-26 23:25:22,454] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@221083fe{/executors/json,null,AVAILABLE,@Spark}
+ INFO [2020-10-26 23:25:22,455] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@2d0b8e8a{/executors/threadDump,null,AVAILABLE,@Spark}
+ INFO [2020-10-26 23:25:22,455] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@74f9ce20{/executors/threadDump/json,null,AVAILABLE,@Spark}
+ INFO [2020-10-26 23:25:22,462] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@6334517b{/static,null,AVAILABLE,@Spark}
+ INFO [2020-10-26 23:25:22,463] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@2af6a4b8{/,null,AVAILABLE,@Spark}
+ INFO [2020-10-26 23:25:22,464] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@543bf7c2{/api,null,AVAILABLE,@Spark}
+ INFO [2020-10-26 23:25:22,465] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@373e362{/jobs/job/kill,null,AVAILABLE,@Spark}
+ INFO [2020-10-26 23:25:22,465] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@7be622a5{/stages/stage/kill,null,AVAILABLE,@Spark}
+ INFO [2020-10-26 23:25:22,467] ({pool-2-thread-2} Logging.scala[logInfo]:54) - Bound SparkUI to 0.0.0.0, and started at http://200.16.29.165:4041
+ INFO [2020-10-26 23:25:22,532] ({pool-2-thread-2} Logging.scala[logInfo]:54) - Starting executor ID driver on host localhost
+ INFO [2020-10-26 23:25:22,539] ({pool-2-thread-2} Logging.scala[logInfo]:54) - Using REPL class URI: spark://200.16.29.165:42913/classes
+ INFO [2020-10-26 23:25:22,562] ({pool-2-thread-2} Logging.scala[logInfo]:54) - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 45167.
+ INFO [2020-10-26 23:25:22,563] ({pool-2-thread-2} Logging.scala[logInfo]:54) - Server created on 200.16.29.165:45167
+ INFO [2020-10-26 23:25:22,565] ({pool-2-thread-2} Logging.scala[logInfo]:54) - Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+ INFO [2020-10-26 23:25:22,566] ({pool-2-thread-2} Logging.scala[logInfo]:54) - Registering BlockManager BlockManagerId(driver, 200.16.29.165, 45167, None)
+ INFO [2020-10-26 23:25:22,571] ({dispatcher-event-loop-10} Logging.scala[logInfo]:54) - Registering block manager 200.16.29.165:45167 with 1458.6 MB RAM, BlockManagerId(driver, 200.16.29.165, 45167, None)
+ INFO [2020-10-26 23:25:22,574] ({pool-2-thread-2} Logging.scala[logInfo]:54) - Registered BlockManager BlockManagerId(driver, 200.16.29.165, 45167, None)
+ INFO [2020-10-26 23:25:22,574] ({pool-2-thread-2} Logging.scala[logInfo]:54) - Initialized BlockManager: BlockManagerId(driver, 200.16.29.165, 45167, None)
+ INFO [2020-10-26 23:25:22,702] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@3d981f2f{/metrics/json,null,AVAILABLE,@Spark}
+ INFO [2020-10-26 23:25:25,344] ({pool-2-thread-2} SparkShims.java[loadShims]:62) - Initializing shims for Spark 2.x
+ INFO [2020-10-26 23:25:25,529] ({pool-2-thread-2} Py4JUtils.java[createGatewayServer]:44) - Launching GatewayServer at 127.0.0.1:44893
+ INFO [2020-10-26 23:25:25,541] ({pool-2-thread-2} PySparkInterpreter.java[createGatewayServerAndStartScript]:265) - pythonExec: python
+ INFO [2020-10-26 23:25:25,549] ({pool-2-thread-2} PySparkInterpreter.java[setupPySparkEnv]:236) - PYTHONPATH: /users/ssulca/diplodatos_bigdata/spark/zeppelin-0.8.2-bin-all/interpreter/spark/pyspark/pyspark.zip:/users/ssulca/diplodatos_bigdata/spark/zeppelin-0.8.2-bin-all/interpreter/spark/pyspark/py4j-0.10.4-src.zip:/users/ssulca/diplodatos_bigdata/spark/zeppelin-0.8.2-bin-all/interpreter/lib/python::/users/ssulca/diplodatos_bigdata/spark/zeppelin-0.8.2-bin-all/local-repo/graphframes/graphframes/0.6.0-spark2.2-s_2.11/graphframes-0.6.0-spark2.2-s_2.11.jar:/users/ssulca/diplodatos_bigdata/spark/zeppelin-0.8.2-bin-all/local-repo/graphframes/graphframes/0.6.0-spark2.2-s_2.11/graphframes-0.6.0-spark2.2-s_2.11.jar:/users/ssulca/diplodatos_bigdata/spark/zeppelin-0.8.2-bin-all/interpreter/spark/pyspark/pyspark.zip:/users/ssulca/diplodatos_bigdata/spark/zeppelin-0.8.2-bin-all/interpreter/spark/pyspark/py4j-0.10.4-src.zip
+ INFO [2020-10-26 23:25:27,072] ({Thread-17} Logging.scala[logInfo]:54) - Block broadcast_0 stored as values in memory (estimated size 225.9 KB, free 1458.4 MB)
+ INFO [2020-10-26 23:25:27,118] ({Thread-17} Logging.scala[logInfo]:54) - Block broadcast_0_piece0 stored as bytes in memory (estimated size 21.4 KB, free 1458.4 MB)
+ INFO [2020-10-26 23:25:27,120] ({dispatcher-event-loop-12} Logging.scala[logInfo]:54) - Added broadcast_0_piece0 in memory on 200.16.29.165:45167 (size: 21.4 KB, free: 1458.6 MB)
+ INFO [2020-10-26 23:25:27,124] ({Thread-17} Logging.scala[logInfo]:54) - Created broadcast 0 from textFile at NativeMethodAccessorImpl.java:0
+ INFO [2020-10-26 23:25:27,196] ({Thread-17} FileInputFormat.java[listStatus]:249) - Total input paths to process : 1
+ INFO [2020-10-26 23:25:27,257] ({pool-2-thread-2} SchedulerFactory.java[jobFinished]:120) - Job 20201023-001936_119304475 finished by scheduler interpreter_1406437594
+ INFO [2020-10-26 23:26:56,433] ({Thread-5} Logging.scala[logInfo]:54) - Invoking stop() from shutdown hook
+ INFO [2020-10-26 23:26:56,458] ({Thread-5} AbstractConnector.java[doStop]:310) - Stopped Spark@4bcf1c04{HTTP/1.1,[http/1.1]}{0.0.0.0:4041}
+ INFO [2020-10-26 23:26:56,465] ({Thread-5} Logging.scala[logInfo]:54) - Stopped Spark web UI at http://200.16.29.165:4041
+ INFO [2020-10-26 23:26:56,474] ({dispatcher-event-loop-12} Logging.scala[logInfo]:54) - MapOutputTrackerMasterEndpoint stopped!
+ INFO [2020-10-26 23:26:56,483] ({Thread-5} Logging.scala[logInfo]:54) - MemoryStore cleared
+ INFO [2020-10-26 23:26:56,483] ({Thread-5} Logging.scala[logInfo]:54) - BlockManager stopped
+ INFO [2020-10-26 23:26:56,484] ({Thread-5} Logging.scala[logInfo]:54) - BlockManagerMaster stopped
+ INFO [2020-10-26 23:26:56,487] ({dispatcher-event-loop-17} Logging.scala[logInfo]:54) - OutputCommitCoordinator stopped!
+ INFO [2020-10-26 23:26:56,490] ({Thread-5} Logging.scala[logInfo]:54) - Successfully stopped SparkContext
+ INFO [2020-10-26 23:26:56,490] ({Thread-5} Logging.scala[logInfo]:54) - Shutdown hook called
+ INFO [2020-10-26 23:26:56,491] ({Thread-5} Logging.scala[logInfo]:54) - Deleting directory /tmp/spark-71991501-c16d-495e-b034-ffc64e0b9a3d
+ INFO [2020-10-26 23:26:56,491] ({Thread-5} Logging.scala[logInfo]:54) - Deleting directory /tmp/spark-71991501-c16d-495e-b034-ffc64e0b9a3d/pyspark-2bf766ff-ca0b-4d3c-a2e9-77f7ecb98011

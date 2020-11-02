@@ -1,0 +1,43 @@
+ INFO [2020-10-27 22:10:52,182] ({main} RemoteInterpreterServer.java[main]:261) - URL:jar:file:/users/ssulca/diplodatos_bigdata/spark/zeppelin-0.8.2-bin-all/interpreter/sh/zeppelin-interpreter-0.8.2.jar!/org/apache/zeppelin/interpreter/remote/RemoteInterpreterServer.class
+ INFO [2020-10-27 22:10:52,249] ({main} RemoteInterpreterServer.java[<init>]:162) - Launching ThriftServer at 200.16.29.165:34231
+ INFO [2020-10-27 22:10:52,257] ({main} RemoteInterpreterServer.java[<init>]:166) - Starting remote interpreter server on port 34231
+ INFO [2020-10-27 22:10:52,260] ({Thread-0} RemoteInterpreterServer.java[run]:203) - Starting remote interpreter server on port 34231
+ INFO [2020-10-27 22:10:53,274] ({Thread-1} RemoteInterpreterUtils.java[registerInterpreter]:165) - callbackHost: 200.16.29.165, callbackPort: 46195, callbackInfo: CallbackInfo(host:200.16.29.165, port:34231)
+ INFO [2020-10-27 22:10:53,416] ({pool-1-thread-1} RemoteInterpreterServer.java[createInterpreter]:311) - Instantiate interpreter org.apache.zeppelin.shell.ShellInterpreter
+ INFO [2020-10-27 22:10:53,500] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:121) - Load configuration from file:/users/ssulca/diplodatos_bigdata/spark/zeppelin-0.8.2-bin-all/zeppelin-site.xml
+ WARN [2020-10-27 22:10:53,550] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:124) - Failed to load configuration from file:/users/ssulca/diplodatos_bigdata/spark/zeppelin-0.8.2-bin-all/zeppelin-site.xml proceeding with a default
+org.apache.commons.configuration.ConfigurationException: Error parsing file:/users/ssulca/diplodatos_bigdata/spark/zeppelin-0.8.2-bin-all/zeppelin-site.xml
+	at org.apache.commons.configuration.XMLConfiguration.load(XMLConfiguration.java:950)
+	at org.apache.commons.configuration.XMLConfiguration.load(XMLConfiguration.java:908)
+	at org.apache.commons.configuration.XMLConfiguration$XMLFileConfigurationDelegate.load(XMLConfiguration.java:1583)
+	at org.apache.commons.configuration.AbstractFileConfiguration.load(AbstractFileConfiguration.java:324)
+	at org.apache.commons.configuration.AbstractHierarchicalFileConfiguration.load(AbstractHierarchicalFileConfiguration.java:199)
+	at org.apache.zeppelin.conf.ZeppelinConfiguration.<init>(ZeppelinConfiguration.java:52)
+	at org.apache.zeppelin.conf.ZeppelinConfiguration.create(ZeppelinConfiguration.java:122)
+	at org.apache.zeppelin.scheduler.SchedulerFactory.<init>(SchedulerFactory.java:56)
+	at org.apache.zeppelin.scheduler.SchedulerFactory.singleton(SchedulerFactory.java:45)
+	at org.apache.zeppelin.shell.ShellInterpreter.getScheduler(ShellInterpreter.java:163)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.getScheduler(LazyOpenInterpreter.java:131)
+	at org.apache.zeppelin.interpreter.remote.RemoteInterpreterServer.interpret(RemoteInterpreterServer.java:431)
+	at org.apache.zeppelin.interpreter.thrift.RemoteInterpreterService$Processor$interpret.getResult(RemoteInterpreterService.java:1859)
+	at org.apache.zeppelin.interpreter.thrift.RemoteInterpreterService$Processor$interpret.getResult(RemoteInterpreterService.java:1844)
+	at org.apache.thrift.ProcessFunction.process(ProcessFunction.java:39)
+	at org.apache.thrift.TBaseProcessor.process(TBaseProcessor.java:39)
+	at org.apache.thrift.server.TThreadPoolServer$WorkerProcess.run(TThreadPoolServer.java:285)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.xml.sax.SAXParseException; systemId: file:/users/ssulca/diplodatos_bigdata/spark/zeppelin-0.8.2-bin-all/zeppelin-site.xml; lineNumber: 1; columnNumber: 1; Premature end of file.
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:257)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at org.apache.commons.configuration.XMLConfiguration.load(XMLConfiguration.java:942)
+	... 19 more
+ INFO [2020-10-27 22:10:53,572] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:129) - Server Host: 127.0.0.1
+ INFO [2020-10-27 22:10:53,572] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:131) - Server Port: 9322
+ INFO [2020-10-27 22:10:53,572] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:135) - Context Path: /
+ INFO [2020-10-27 22:10:53,573] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:136) - Zeppelin Version: 0.8.2
+ INFO [2020-10-27 22:10:53,574] ({pool-1-thread-1} SchedulerFactory.java[<init>]:59) - Scheduler Thread Pool Size: 100
+ INFO [2020-10-27 22:10:53,580] ({pool-2-thread-2} SchedulerFactory.java[jobStarted]:114) - Job 20201027-221024_397552737 started by scheduler org.apache.zeppelin.shell.ShellInterpreter983766433
+ INFO [2020-10-27 22:10:53,593] ({pool-2-thread-2} ShellInterpreter.java[open]:66) - Command timeout property: 60000
+ INFO [2020-10-27 22:10:53,674] ({pool-2-thread-2} ShellInterpreter.java[interpret]:115) - Paragraph 20201027-221024_397552737 return with exit value: 0
+ INFO [2020-10-27 22:10:53,677] ({pool-2-thread-2} SchedulerFactory.java[jobFinished]:120) - Job 20201027-221024_397552737 finished by scheduler org.apache.zeppelin.shell.ShellInterpreter983766433

@@ -1,0 +1,1572 @@
+ INFO [2020-10-23 21:28:33,334] ({main} RemoteInterpreterServer.java[main]:261) - URL:jar:file:/users/ssulca/diplodatos_bigdata/spark/zeppelin-0.8.2-bin-all/interpreter/spark/spark-interpreter-0.8.2.jar!/org/apache/zeppelin/interpreter/remote/RemoteInterpreterServer.class
+ INFO [2020-10-23 21:28:33,407] ({main} RemoteInterpreterServer.java[<init>]:162) - Launching ThriftServer at 200.16.29.165:43335
+ INFO [2020-10-23 21:28:33,413] ({main} RemoteInterpreterServer.java[<init>]:166) - Starting remote interpreter server on port 43335
+ INFO [2020-10-23 21:28:33,415] ({Thread-0} RemoteInterpreterServer.java[run]:203) - Starting remote interpreter server on port 43335
+ INFO [2020-10-23 21:28:34,435] ({Thread-1} RemoteInterpreterUtils.java[registerInterpreter]:165) - callbackHost: 200.16.29.165, callbackPort: 39681, callbackInfo: CallbackInfo(host:200.16.29.165, port:43335)
+ INFO [2020-10-23 21:28:34,750] ({pool-1-thread-1} RemoteInterpreterServer.java[createInterpreter]:311) - Instantiate interpreter org.apache.zeppelin.spark.SparkInterpreter
+ INFO [2020-10-23 21:28:34,754] ({pool-1-thread-1} RemoteInterpreterServer.java[createInterpreter]:311) - Instantiate interpreter org.apache.zeppelin.spark.SparkSqlInterpreter
+ INFO [2020-10-23 21:28:34,775] ({pool-1-thread-1} RemoteInterpreterServer.java[createInterpreter]:311) - Instantiate interpreter org.apache.zeppelin.spark.DepInterpreter
+ INFO [2020-10-23 21:28:34,789] ({pool-1-thread-1} RemoteInterpreterServer.java[createInterpreter]:311) - Instantiate interpreter org.apache.zeppelin.spark.PySparkInterpreter
+ INFO [2020-10-23 21:28:34,797] ({pool-1-thread-1} RemoteInterpreterServer.java[createInterpreter]:311) - Instantiate interpreter org.apache.zeppelin.spark.IPySparkInterpreter
+ INFO [2020-10-23 21:28:34,804] ({pool-1-thread-1} RemoteInterpreterServer.java[createInterpreter]:311) - Instantiate interpreter org.apache.zeppelin.spark.SparkRInterpreter
+ INFO [2020-10-23 21:28:34,900] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:121) - Load configuration from file:/users/ssulca/diplodatos_bigdata/spark/zeppelin-0.8.2-bin-all/zeppelin-site.xml
+ WARN [2020-10-23 21:28:35,028] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:124) - Failed to load configuration from file:/users/ssulca/diplodatos_bigdata/spark/zeppelin-0.8.2-bin-all/zeppelin-site.xml proceeding with a default
+org.apache.commons.configuration.ConfigurationException: Error parsing file:/users/ssulca/diplodatos_bigdata/spark/zeppelin-0.8.2-bin-all/zeppelin-site.xml
+	at org.apache.commons.configuration.XMLConfiguration.load(XMLConfiguration.java:950)
+	at org.apache.commons.configuration.XMLConfiguration.load(XMLConfiguration.java:908)
+	at org.apache.commons.configuration.XMLConfiguration$XMLFileConfigurationDelegate.load(XMLConfiguration.java:1583)
+	at org.apache.commons.configuration.AbstractFileConfiguration.load(AbstractFileConfiguration.java:324)
+	at org.apache.commons.configuration.AbstractHierarchicalFileConfiguration.load(AbstractHierarchicalFileConfiguration.java:199)
+	at org.apache.zeppelin.conf.ZeppelinConfiguration.<init>(ZeppelinConfiguration.java:52)
+	at org.apache.zeppelin.conf.ZeppelinConfiguration.create(ZeppelinConfiguration.java:122)
+	at org.apache.zeppelin.scheduler.SchedulerFactory.<init>(SchedulerFactory.java:56)
+	at org.apache.zeppelin.scheduler.SchedulerFactory.singleton(SchedulerFactory.java:45)
+	at org.apache.zeppelin.interpreter.Interpreter.getScheduler(Interpreter.java:177)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.getScheduler(LazyOpenInterpreter.java:131)
+	at org.apache.zeppelin.interpreter.remote.RemoteInterpreterServer.interpret(RemoteInterpreterServer.java:431)
+	at org.apache.zeppelin.interpreter.thrift.RemoteInterpreterService$Processor$interpret.getResult(RemoteInterpreterService.java:1859)
+	at org.apache.zeppelin.interpreter.thrift.RemoteInterpreterService$Processor$interpret.getResult(RemoteInterpreterService.java:1844)
+	at org.apache.thrift.ProcessFunction.process(ProcessFunction.java:39)
+	at org.apache.thrift.TBaseProcessor.process(TBaseProcessor.java:39)
+	at org.apache.thrift.server.TThreadPoolServer$WorkerProcess.run(TThreadPoolServer.java:285)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.xml.sax.SAXParseException; Premature end of file.
+	at org.apache.xerces.parsers.DOMParser.parse(Unknown Source)
+	at org.apache.xerces.jaxp.DocumentBuilderImpl.parse(Unknown Source)
+	at org.apache.commons.configuration.XMLConfiguration.load(XMLConfiguration.java:942)
+	... 19 more
+ INFO [2020-10-23 21:28:35,055] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:129) - Server Host: 127.0.0.1
+ INFO [2020-10-23 21:28:35,055] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:131) - Server Port: 8080
+ INFO [2020-10-23 21:28:35,055] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:135) - Context Path: /
+ INFO [2020-10-23 21:28:35,059] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:136) - Zeppelin Version: 0.8.2
+ INFO [2020-10-23 21:28:35,059] ({pool-1-thread-1} SchedulerFactory.java[<init>]:59) - Scheduler Thread Pool Size: 100
+ INFO [2020-10-23 21:28:35,065] ({pool-2-thread-2} SchedulerFactory.java[jobStarted]:114) - Job 20201023-001936_119304475 started by scheduler interpreter_1030962696
+ INFO [2020-10-23 21:28:36,042] ({pool-2-thread-2} PySparkInterpreter.java[open]:140) - IPython is not available, use the native PySparkInterpreter
+
+ INFO [2020-10-23 21:28:36,063] ({pool-2-thread-2} PySparkInterpreter.java[createPythonScript]:118) - File /tmp/zeppelin_pyspark-1846131357375741470.py created
+ INFO [2020-10-23 21:28:36,173] ({pool-2-thread-2} NewSparkInterpreter.java[open]:83) - Using Scala Version: 2.11
+ERROR [2020-10-23 21:28:38,673] ({pool-2-thread-2} NewSparkInterpreter.java[open]:127) - Fail to open SparkInterpreter
+ERROR [2020-10-23 21:28:38,673] ({pool-2-thread-2} PySparkInterpreter.java[open]:196) - Error
+org.apache.zeppelin.interpreter.InterpreterException: Fail to open SparkInterpreter
+	at org.apache.zeppelin.spark.NewSparkInterpreter.open(NewSparkInterpreter.java:128)
+	at org.apache.zeppelin.spark.SparkInterpreter.open(SparkInterpreter.java:62)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.spark.PySparkInterpreter.getSparkInterpreter(PySparkInterpreter.java:664)
+	at org.apache.zeppelin.spark.PySparkInterpreter.createGatewayServerAndStartScript(PySparkInterpreter.java:260)
+	at org.apache.zeppelin.spark.PySparkInterpreter.open(PySparkInterpreter.java:194)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.interpreter.remote.RemoteInterpreterServer$InterpretJob.jobRun(RemoteInterpreterServer.java:616)
+	at org.apache.zeppelin.scheduler.Job.run(Job.java:188)
+	at org.apache.zeppelin.scheduler.FIFOScheduler$1.run(FIFOScheduler.java:140)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: scala.reflect.internal.MissingRequirementError: object java.lang.Object in compiler mirror not found.
+	at scala.reflect.internal.MissingRequirementError$.signal(MissingRequirementError.scala:17)
+	at scala.reflect.internal.MissingRequirementError$.notFound(MissingRequirementError.scala:18)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:53)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:45)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:45)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:66)
+	at scala.reflect.internal.Mirrors$RootsBase.getClassByName(Mirrors.scala:102)
+	at scala.reflect.internal.Mirrors$RootsBase.getRequiredClass(Mirrors.scala:105)
+	at scala.reflect.internal.Definitions$DefinitionsClass.ObjectClass$lzycompute(Definitions.scala:257)
+	at scala.reflect.internal.Definitions$DefinitionsClass.ObjectClass(Definitions.scala:257)
+	at scala.reflect.internal.Definitions$DefinitionsClass.init(Definitions.scala:1394)
+	at scala.tools.nsc.Global$Run.<init>(Global.scala:1215)
+	at scala.tools.nsc.interpreter.IMain.compileSourcesKeepingRun(IMain.scala:432)
+	at scala.tools.nsc.interpreter.IMain$ReadEvalPrint.compileAndSaveRun(IMain.scala:855)
+	at scala.tools.nsc.interpreter.IMain$ReadEvalPrint.compile(IMain.scala:813)
+	at scala.tools.nsc.interpreter.IMain.bind(IMain.scala:675)
+	at scala.tools.nsc.interpreter.IMain.bind(IMain.scala:712)
+	at scala.tools.nsc.interpreter.IMain$$anonfun$quietBind$1.apply(IMain.scala:711)
+	at scala.tools.nsc.interpreter.IMain$$anonfun$quietBind$1.apply(IMain.scala:711)
+	at scala.tools.nsc.interpreter.IMain.beQuietDuring(IMain.scala:214)
+	at scala.tools.nsc.interpreter.IMain.quietBind(IMain.scala:711)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter$.loopPostInit$1(SparkScala211Interpreter.scala:142)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter$.org$apache$zeppelin$spark$SparkScala211Interpreter$$loopPostInit(SparkScala211Interpreter.scala:177)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter.open(SparkScala211Interpreter.scala:87)
+	at org.apache.zeppelin.spark.NewSparkInterpreter.open(NewSparkInterpreter.java:102)
+	... 15 more
+ERROR [2020-10-23 21:28:38,674] ({pool-2-thread-2} Job.java[run]:190) - Job failed
+org.apache.zeppelin.interpreter.InterpreterException: org.apache.zeppelin.interpreter.InterpreterException: Fail to open SparkInterpreter
+	at org.apache.zeppelin.spark.PySparkInterpreter.open(PySparkInterpreter.java:197)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.interpreter.remote.RemoteInterpreterServer$InterpretJob.jobRun(RemoteInterpreterServer.java:616)
+	at org.apache.zeppelin.scheduler.Job.run(Job.java:188)
+	at org.apache.zeppelin.scheduler.FIFOScheduler$1.run(FIFOScheduler.java:140)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.apache.zeppelin.interpreter.InterpreterException: Fail to open SparkInterpreter
+	at org.apache.zeppelin.spark.NewSparkInterpreter.open(NewSparkInterpreter.java:128)
+	at org.apache.zeppelin.spark.SparkInterpreter.open(SparkInterpreter.java:62)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.spark.PySparkInterpreter.getSparkInterpreter(PySparkInterpreter.java:664)
+	at org.apache.zeppelin.spark.PySparkInterpreter.createGatewayServerAndStartScript(PySparkInterpreter.java:260)
+	at org.apache.zeppelin.spark.PySparkInterpreter.open(PySparkInterpreter.java:194)
+	... 10 more
+Caused by: scala.reflect.internal.MissingRequirementError: object java.lang.Object in compiler mirror not found.
+	at scala.reflect.internal.MissingRequirementError$.signal(MissingRequirementError.scala:17)
+	at scala.reflect.internal.MissingRequirementError$.notFound(MissingRequirementError.scala:18)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:53)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:45)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:45)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:66)
+	at scala.reflect.internal.Mirrors$RootsBase.getClassByName(Mirrors.scala:102)
+	at scala.reflect.internal.Mirrors$RootsBase.getRequiredClass(Mirrors.scala:105)
+	at scala.reflect.internal.Definitions$DefinitionsClass.ObjectClass$lzycompute(Definitions.scala:257)
+	at scala.reflect.internal.Definitions$DefinitionsClass.ObjectClass(Definitions.scala:257)
+	at scala.reflect.internal.Definitions$DefinitionsClass.init(Definitions.scala:1394)
+	at scala.tools.nsc.Global$Run.<init>(Global.scala:1215)
+	at scala.tools.nsc.interpreter.IMain.compileSourcesKeepingRun(IMain.scala:432)
+	at scala.tools.nsc.interpreter.IMain$ReadEvalPrint.compileAndSaveRun(IMain.scala:855)
+	at scala.tools.nsc.interpreter.IMain$ReadEvalPrint.compile(IMain.scala:813)
+	at scala.tools.nsc.interpreter.IMain.bind(IMain.scala:675)
+	at scala.tools.nsc.interpreter.IMain.bind(IMain.scala:712)
+	at scala.tools.nsc.interpreter.IMain$$anonfun$quietBind$1.apply(IMain.scala:711)
+	at scala.tools.nsc.interpreter.IMain$$anonfun$quietBind$1.apply(IMain.scala:711)
+	at scala.tools.nsc.interpreter.IMain.beQuietDuring(IMain.scala:214)
+	at scala.tools.nsc.interpreter.IMain.quietBind(IMain.scala:711)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter$.loopPostInit$1(SparkScala211Interpreter.scala:142)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter$.org$apache$zeppelin$spark$SparkScala211Interpreter$$loopPostInit(SparkScala211Interpreter.scala:177)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter.open(SparkScala211Interpreter.scala:87)
+	at org.apache.zeppelin.spark.NewSparkInterpreter.open(NewSparkInterpreter.java:102)
+	... 15 more
+ INFO [2020-10-23 21:28:38,701] ({pool-2-thread-2} SchedulerFactory.java[jobFinished]:120) - Job 20201023-001936_119304475 finished by scheduler interpreter_1030962696
+ INFO [2020-10-23 21:30:23,334] ({pool-2-thread-2} SchedulerFactory.java[jobStarted]:114) - Job 20201023-001936_119304475 started by scheduler interpreter_1030962696
+ INFO [2020-10-23 21:30:23,755] ({pool-2-thread-2} PySparkInterpreter.java[open]:140) - IPython is not available, use the native PySparkInterpreter
+
+ INFO [2020-10-23 21:30:23,761] ({pool-2-thread-2} PySparkInterpreter.java[createPythonScript]:118) - File /tmp/zeppelin_pyspark-1846131357375741470.py created
+ INFO [2020-10-23 21:30:23,761] ({pool-2-thread-2} NewSparkInterpreter.java[open]:83) - Using Scala Version: 2.11
+ERROR [2020-10-23 21:30:23,981] ({pool-2-thread-2} NewSparkInterpreter.java[open]:127) - Fail to open SparkInterpreter
+ERROR [2020-10-23 21:30:23,981] ({pool-2-thread-2} PySparkInterpreter.java[open]:196) - Error
+org.apache.zeppelin.interpreter.InterpreterException: Fail to open SparkInterpreter
+	at org.apache.zeppelin.spark.NewSparkInterpreter.open(NewSparkInterpreter.java:128)
+	at org.apache.zeppelin.spark.SparkInterpreter.open(SparkInterpreter.java:62)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.spark.PySparkInterpreter.getSparkInterpreter(PySparkInterpreter.java:664)
+	at org.apache.zeppelin.spark.PySparkInterpreter.createGatewayServerAndStartScript(PySparkInterpreter.java:260)
+	at org.apache.zeppelin.spark.PySparkInterpreter.open(PySparkInterpreter.java:194)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.interpreter.remote.RemoteInterpreterServer$InterpretJob.jobRun(RemoteInterpreterServer.java:616)
+	at org.apache.zeppelin.scheduler.Job.run(Job.java:188)
+	at org.apache.zeppelin.scheduler.FIFOScheduler$1.run(FIFOScheduler.java:140)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: scala.reflect.internal.MissingRequirementError: object java.lang.Object in compiler mirror not found.
+	at scala.reflect.internal.MissingRequirementError$.signal(MissingRequirementError.scala:17)
+	at scala.reflect.internal.MissingRequirementError$.notFound(MissingRequirementError.scala:18)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:53)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:45)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:45)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:66)
+	at scala.reflect.internal.Mirrors$RootsBase.getClassByName(Mirrors.scala:102)
+	at scala.reflect.internal.Mirrors$RootsBase.getRequiredClass(Mirrors.scala:105)
+	at scala.reflect.internal.Definitions$DefinitionsClass.ObjectClass$lzycompute(Definitions.scala:257)
+	at scala.reflect.internal.Definitions$DefinitionsClass.ObjectClass(Definitions.scala:257)
+	at scala.reflect.internal.Definitions$DefinitionsClass.init(Definitions.scala:1394)
+	at scala.tools.nsc.Global$Run.<init>(Global.scala:1215)
+	at scala.tools.nsc.interpreter.IMain.compileSourcesKeepingRun(IMain.scala:432)
+	at scala.tools.nsc.interpreter.IMain$ReadEvalPrint.compileAndSaveRun(IMain.scala:855)
+	at scala.tools.nsc.interpreter.IMain$ReadEvalPrint.compile(IMain.scala:813)
+	at scala.tools.nsc.interpreter.IMain.bind(IMain.scala:675)
+	at scala.tools.nsc.interpreter.IMain.bind(IMain.scala:712)
+	at scala.tools.nsc.interpreter.IMain$$anonfun$quietBind$1.apply(IMain.scala:711)
+	at scala.tools.nsc.interpreter.IMain$$anonfun$quietBind$1.apply(IMain.scala:711)
+	at scala.tools.nsc.interpreter.IMain.beQuietDuring(IMain.scala:214)
+	at scala.tools.nsc.interpreter.IMain.quietBind(IMain.scala:711)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter$.loopPostInit$1(SparkScala211Interpreter.scala:142)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter$.org$apache$zeppelin$spark$SparkScala211Interpreter$$loopPostInit(SparkScala211Interpreter.scala:177)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter.open(SparkScala211Interpreter.scala:87)
+	at org.apache.zeppelin.spark.NewSparkInterpreter.open(NewSparkInterpreter.java:102)
+	... 15 more
+ERROR [2020-10-23 21:30:23,982] ({pool-2-thread-2} Job.java[run]:190) - Job failed
+org.apache.zeppelin.interpreter.InterpreterException: org.apache.zeppelin.interpreter.InterpreterException: Fail to open SparkInterpreter
+	at org.apache.zeppelin.spark.PySparkInterpreter.open(PySparkInterpreter.java:197)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.interpreter.remote.RemoteInterpreterServer$InterpretJob.jobRun(RemoteInterpreterServer.java:616)
+	at org.apache.zeppelin.scheduler.Job.run(Job.java:188)
+	at org.apache.zeppelin.scheduler.FIFOScheduler$1.run(FIFOScheduler.java:140)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.apache.zeppelin.interpreter.InterpreterException: Fail to open SparkInterpreter
+	at org.apache.zeppelin.spark.NewSparkInterpreter.open(NewSparkInterpreter.java:128)
+	at org.apache.zeppelin.spark.SparkInterpreter.open(SparkInterpreter.java:62)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.spark.PySparkInterpreter.getSparkInterpreter(PySparkInterpreter.java:664)
+	at org.apache.zeppelin.spark.PySparkInterpreter.createGatewayServerAndStartScript(PySparkInterpreter.java:260)
+	at org.apache.zeppelin.spark.PySparkInterpreter.open(PySparkInterpreter.java:194)
+	... 10 more
+Caused by: scala.reflect.internal.MissingRequirementError: object java.lang.Object in compiler mirror not found.
+	at scala.reflect.internal.MissingRequirementError$.signal(MissingRequirementError.scala:17)
+	at scala.reflect.internal.MissingRequirementError$.notFound(MissingRequirementError.scala:18)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:53)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:45)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:45)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:66)
+	at scala.reflect.internal.Mirrors$RootsBase.getClassByName(Mirrors.scala:102)
+	at scala.reflect.internal.Mirrors$RootsBase.getRequiredClass(Mirrors.scala:105)
+	at scala.reflect.internal.Definitions$DefinitionsClass.ObjectClass$lzycompute(Definitions.scala:257)
+	at scala.reflect.internal.Definitions$DefinitionsClass.ObjectClass(Definitions.scala:257)
+	at scala.reflect.internal.Definitions$DefinitionsClass.init(Definitions.scala:1394)
+	at scala.tools.nsc.Global$Run.<init>(Global.scala:1215)
+	at scala.tools.nsc.interpreter.IMain.compileSourcesKeepingRun(IMain.scala:432)
+	at scala.tools.nsc.interpreter.IMain$ReadEvalPrint.compileAndSaveRun(IMain.scala:855)
+	at scala.tools.nsc.interpreter.IMain$ReadEvalPrint.compile(IMain.scala:813)
+	at scala.tools.nsc.interpreter.IMain.bind(IMain.scala:675)
+	at scala.tools.nsc.interpreter.IMain.bind(IMain.scala:712)
+	at scala.tools.nsc.interpreter.IMain$$anonfun$quietBind$1.apply(IMain.scala:711)
+	at scala.tools.nsc.interpreter.IMain$$anonfun$quietBind$1.apply(IMain.scala:711)
+	at scala.tools.nsc.interpreter.IMain.beQuietDuring(IMain.scala:214)
+	at scala.tools.nsc.interpreter.IMain.quietBind(IMain.scala:711)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter$.loopPostInit$1(SparkScala211Interpreter.scala:142)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter$.org$apache$zeppelin$spark$SparkScala211Interpreter$$loopPostInit(SparkScala211Interpreter.scala:177)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter.open(SparkScala211Interpreter.scala:87)
+	at org.apache.zeppelin.spark.NewSparkInterpreter.open(NewSparkInterpreter.java:102)
+	... 15 more
+ INFO [2020-10-23 21:30:23,984] ({pool-2-thread-2} SchedulerFactory.java[jobFinished]:120) - Job 20201023-001936_119304475 finished by scheduler interpreter_1030962696
+ INFO [2020-10-23 21:34:21,656] ({pool-2-thread-4} SchedulerFactory.java[jobStarted]:114) - Job 20201023-001936_119304475 started by scheduler interpreter_1030962696
+ INFO [2020-10-23 21:34:22,084] ({pool-2-thread-4} PySparkInterpreter.java[open]:140) - IPython is not available, use the native PySparkInterpreter
+
+ INFO [2020-10-23 21:34:22,088] ({pool-2-thread-4} PySparkInterpreter.java[createPythonScript]:118) - File /tmp/zeppelin_pyspark-1846131357375741470.py created
+ INFO [2020-10-23 21:34:22,091] ({pool-2-thread-4} NewSparkInterpreter.java[open]:83) - Using Scala Version: 2.11
+ERROR [2020-10-23 21:34:22,264] ({pool-2-thread-4} NewSparkInterpreter.java[open]:127) - Fail to open SparkInterpreter
+ERROR [2020-10-23 21:34:22,264] ({pool-2-thread-4} PySparkInterpreter.java[open]:196) - Error
+org.apache.zeppelin.interpreter.InterpreterException: Fail to open SparkInterpreter
+	at org.apache.zeppelin.spark.NewSparkInterpreter.open(NewSparkInterpreter.java:128)
+	at org.apache.zeppelin.spark.SparkInterpreter.open(SparkInterpreter.java:62)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.spark.PySparkInterpreter.getSparkInterpreter(PySparkInterpreter.java:664)
+	at org.apache.zeppelin.spark.PySparkInterpreter.createGatewayServerAndStartScript(PySparkInterpreter.java:260)
+	at org.apache.zeppelin.spark.PySparkInterpreter.open(PySparkInterpreter.java:194)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.interpreter.remote.RemoteInterpreterServer$InterpretJob.jobRun(RemoteInterpreterServer.java:616)
+	at org.apache.zeppelin.scheduler.Job.run(Job.java:188)
+	at org.apache.zeppelin.scheduler.FIFOScheduler$1.run(FIFOScheduler.java:140)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: scala.reflect.internal.MissingRequirementError: object java.lang.Object in compiler mirror not found.
+	at scala.reflect.internal.MissingRequirementError$.signal(MissingRequirementError.scala:17)
+	at scala.reflect.internal.MissingRequirementError$.notFound(MissingRequirementError.scala:18)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:53)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:45)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:45)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:66)
+	at scala.reflect.internal.Mirrors$RootsBase.getClassByName(Mirrors.scala:102)
+	at scala.reflect.internal.Mirrors$RootsBase.getRequiredClass(Mirrors.scala:105)
+	at scala.reflect.internal.Definitions$DefinitionsClass.ObjectClass$lzycompute(Definitions.scala:257)
+	at scala.reflect.internal.Definitions$DefinitionsClass.ObjectClass(Definitions.scala:257)
+	at scala.reflect.internal.Definitions$DefinitionsClass.init(Definitions.scala:1394)
+	at scala.tools.nsc.Global$Run.<init>(Global.scala:1215)
+	at scala.tools.nsc.interpreter.IMain.compileSourcesKeepingRun(IMain.scala:432)
+	at scala.tools.nsc.interpreter.IMain$ReadEvalPrint.compileAndSaveRun(IMain.scala:855)
+	at scala.tools.nsc.interpreter.IMain$ReadEvalPrint.compile(IMain.scala:813)
+	at scala.tools.nsc.interpreter.IMain.bind(IMain.scala:675)
+	at scala.tools.nsc.interpreter.IMain.bind(IMain.scala:712)
+	at scala.tools.nsc.interpreter.IMain$$anonfun$quietBind$1.apply(IMain.scala:711)
+	at scala.tools.nsc.interpreter.IMain$$anonfun$quietBind$1.apply(IMain.scala:711)
+	at scala.tools.nsc.interpreter.IMain.beQuietDuring(IMain.scala:214)
+	at scala.tools.nsc.interpreter.IMain.quietBind(IMain.scala:711)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter$.loopPostInit$1(SparkScala211Interpreter.scala:142)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter$.org$apache$zeppelin$spark$SparkScala211Interpreter$$loopPostInit(SparkScala211Interpreter.scala:177)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter.open(SparkScala211Interpreter.scala:87)
+	at org.apache.zeppelin.spark.NewSparkInterpreter.open(NewSparkInterpreter.java:102)
+	... 15 more
+ERROR [2020-10-23 21:34:22,265] ({pool-2-thread-4} Job.java[run]:190) - Job failed
+org.apache.zeppelin.interpreter.InterpreterException: org.apache.zeppelin.interpreter.InterpreterException: Fail to open SparkInterpreter
+	at org.apache.zeppelin.spark.PySparkInterpreter.open(PySparkInterpreter.java:197)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.interpreter.remote.RemoteInterpreterServer$InterpretJob.jobRun(RemoteInterpreterServer.java:616)
+	at org.apache.zeppelin.scheduler.Job.run(Job.java:188)
+	at org.apache.zeppelin.scheduler.FIFOScheduler$1.run(FIFOScheduler.java:140)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.apache.zeppelin.interpreter.InterpreterException: Fail to open SparkInterpreter
+	at org.apache.zeppelin.spark.NewSparkInterpreter.open(NewSparkInterpreter.java:128)
+	at org.apache.zeppelin.spark.SparkInterpreter.open(SparkInterpreter.java:62)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.spark.PySparkInterpreter.getSparkInterpreter(PySparkInterpreter.java:664)
+	at org.apache.zeppelin.spark.PySparkInterpreter.createGatewayServerAndStartScript(PySparkInterpreter.java:260)
+	at org.apache.zeppelin.spark.PySparkInterpreter.open(PySparkInterpreter.java:194)
+	... 10 more
+Caused by: scala.reflect.internal.MissingRequirementError: object java.lang.Object in compiler mirror not found.
+	at scala.reflect.internal.MissingRequirementError$.signal(MissingRequirementError.scala:17)
+	at scala.reflect.internal.MissingRequirementError$.notFound(MissingRequirementError.scala:18)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:53)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:45)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:45)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:66)
+	at scala.reflect.internal.Mirrors$RootsBase.getClassByName(Mirrors.scala:102)
+	at scala.reflect.internal.Mirrors$RootsBase.getRequiredClass(Mirrors.scala:105)
+	at scala.reflect.internal.Definitions$DefinitionsClass.ObjectClass$lzycompute(Definitions.scala:257)
+	at scala.reflect.internal.Definitions$DefinitionsClass.ObjectClass(Definitions.scala:257)
+	at scala.reflect.internal.Definitions$DefinitionsClass.init(Definitions.scala:1394)
+	at scala.tools.nsc.Global$Run.<init>(Global.scala:1215)
+	at scala.tools.nsc.interpreter.IMain.compileSourcesKeepingRun(IMain.scala:432)
+	at scala.tools.nsc.interpreter.IMain$ReadEvalPrint.compileAndSaveRun(IMain.scala:855)
+	at scala.tools.nsc.interpreter.IMain$ReadEvalPrint.compile(IMain.scala:813)
+	at scala.tools.nsc.interpreter.IMain.bind(IMain.scala:675)
+	at scala.tools.nsc.interpreter.IMain.bind(IMain.scala:712)
+	at scala.tools.nsc.interpreter.IMain$$anonfun$quietBind$1.apply(IMain.scala:711)
+	at scala.tools.nsc.interpreter.IMain$$anonfun$quietBind$1.apply(IMain.scala:711)
+	at scala.tools.nsc.interpreter.IMain.beQuietDuring(IMain.scala:214)
+	at scala.tools.nsc.interpreter.IMain.quietBind(IMain.scala:711)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter$.loopPostInit$1(SparkScala211Interpreter.scala:142)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter$.org$apache$zeppelin$spark$SparkScala211Interpreter$$loopPostInit(SparkScala211Interpreter.scala:177)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter.open(SparkScala211Interpreter.scala:87)
+	at org.apache.zeppelin.spark.NewSparkInterpreter.open(NewSparkInterpreter.java:102)
+	... 15 more
+ INFO [2020-10-23 21:34:22,267] ({pool-2-thread-4} SchedulerFactory.java[jobFinished]:120) - Job 20201023-001936_119304475 finished by scheduler interpreter_1030962696
+ INFO [2020-10-23 21:35:29,358] ({pool-2-thread-2} SchedulerFactory.java[jobStarted]:114) - Job 20201023-001936_119304475 started by scheduler interpreter_1030962696
+ INFO [2020-10-23 21:35:29,777] ({pool-2-thread-2} PySparkInterpreter.java[open]:140) - IPython is not available, use the native PySparkInterpreter
+
+ INFO [2020-10-23 21:35:29,780] ({pool-2-thread-2} PySparkInterpreter.java[createPythonScript]:118) - File /tmp/zeppelin_pyspark-1846131357375741470.py created
+ INFO [2020-10-23 21:35:29,781] ({pool-2-thread-2} NewSparkInterpreter.java[open]:83) - Using Scala Version: 2.11
+ERROR [2020-10-23 21:35:29,948] ({pool-2-thread-2} NewSparkInterpreter.java[open]:127) - Fail to open SparkInterpreter
+ERROR [2020-10-23 21:35:29,948] ({pool-2-thread-2} PySparkInterpreter.java[open]:196) - Error
+org.apache.zeppelin.interpreter.InterpreterException: Fail to open SparkInterpreter
+	at org.apache.zeppelin.spark.NewSparkInterpreter.open(NewSparkInterpreter.java:128)
+	at org.apache.zeppelin.spark.SparkInterpreter.open(SparkInterpreter.java:62)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.spark.PySparkInterpreter.getSparkInterpreter(PySparkInterpreter.java:664)
+	at org.apache.zeppelin.spark.PySparkInterpreter.createGatewayServerAndStartScript(PySparkInterpreter.java:260)
+	at org.apache.zeppelin.spark.PySparkInterpreter.open(PySparkInterpreter.java:194)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.interpreter.remote.RemoteInterpreterServer$InterpretJob.jobRun(RemoteInterpreterServer.java:616)
+	at org.apache.zeppelin.scheduler.Job.run(Job.java:188)
+	at org.apache.zeppelin.scheduler.FIFOScheduler$1.run(FIFOScheduler.java:140)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: scala.reflect.internal.MissingRequirementError: object java.lang.Object in compiler mirror not found.
+	at scala.reflect.internal.MissingRequirementError$.signal(MissingRequirementError.scala:17)
+	at scala.reflect.internal.MissingRequirementError$.notFound(MissingRequirementError.scala:18)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:53)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:45)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:45)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:66)
+	at scala.reflect.internal.Mirrors$RootsBase.getClassByName(Mirrors.scala:102)
+	at scala.reflect.internal.Mirrors$RootsBase.getRequiredClass(Mirrors.scala:105)
+	at scala.reflect.internal.Definitions$DefinitionsClass.ObjectClass$lzycompute(Definitions.scala:257)
+	at scala.reflect.internal.Definitions$DefinitionsClass.ObjectClass(Definitions.scala:257)
+	at scala.reflect.internal.Definitions$DefinitionsClass.init(Definitions.scala:1394)
+	at scala.tools.nsc.Global$Run.<init>(Global.scala:1215)
+	at scala.tools.nsc.interpreter.IMain.compileSourcesKeepingRun(IMain.scala:432)
+	at scala.tools.nsc.interpreter.IMain$ReadEvalPrint.compileAndSaveRun(IMain.scala:855)
+	at scala.tools.nsc.interpreter.IMain$ReadEvalPrint.compile(IMain.scala:813)
+	at scala.tools.nsc.interpreter.IMain.bind(IMain.scala:675)
+	at scala.tools.nsc.interpreter.IMain.bind(IMain.scala:712)
+	at scala.tools.nsc.interpreter.IMain$$anonfun$quietBind$1.apply(IMain.scala:711)
+	at scala.tools.nsc.interpreter.IMain$$anonfun$quietBind$1.apply(IMain.scala:711)
+	at scala.tools.nsc.interpreter.IMain.beQuietDuring(IMain.scala:214)
+	at scala.tools.nsc.interpreter.IMain.quietBind(IMain.scala:711)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter$.loopPostInit$1(SparkScala211Interpreter.scala:142)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter$.org$apache$zeppelin$spark$SparkScala211Interpreter$$loopPostInit(SparkScala211Interpreter.scala:177)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter.open(SparkScala211Interpreter.scala:87)
+	at org.apache.zeppelin.spark.NewSparkInterpreter.open(NewSparkInterpreter.java:102)
+	... 15 more
+ERROR [2020-10-23 21:35:29,949] ({pool-2-thread-2} Job.java[run]:190) - Job failed
+org.apache.zeppelin.interpreter.InterpreterException: org.apache.zeppelin.interpreter.InterpreterException: Fail to open SparkInterpreter
+	at org.apache.zeppelin.spark.PySparkInterpreter.open(PySparkInterpreter.java:197)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.interpreter.remote.RemoteInterpreterServer$InterpretJob.jobRun(RemoteInterpreterServer.java:616)
+	at org.apache.zeppelin.scheduler.Job.run(Job.java:188)
+	at org.apache.zeppelin.scheduler.FIFOScheduler$1.run(FIFOScheduler.java:140)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.apache.zeppelin.interpreter.InterpreterException: Fail to open SparkInterpreter
+	at org.apache.zeppelin.spark.NewSparkInterpreter.open(NewSparkInterpreter.java:128)
+	at org.apache.zeppelin.spark.SparkInterpreter.open(SparkInterpreter.java:62)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.spark.PySparkInterpreter.getSparkInterpreter(PySparkInterpreter.java:664)
+	at org.apache.zeppelin.spark.PySparkInterpreter.createGatewayServerAndStartScript(PySparkInterpreter.java:260)
+	at org.apache.zeppelin.spark.PySparkInterpreter.open(PySparkInterpreter.java:194)
+	... 10 more
+Caused by: scala.reflect.internal.MissingRequirementError: object java.lang.Object in compiler mirror not found.
+	at scala.reflect.internal.MissingRequirementError$.signal(MissingRequirementError.scala:17)
+	at scala.reflect.internal.MissingRequirementError$.notFound(MissingRequirementError.scala:18)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:53)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:45)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:45)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:66)
+	at scala.reflect.internal.Mirrors$RootsBase.getClassByName(Mirrors.scala:102)
+	at scala.reflect.internal.Mirrors$RootsBase.getRequiredClass(Mirrors.scala:105)
+	at scala.reflect.internal.Definitions$DefinitionsClass.ObjectClass$lzycompute(Definitions.scala:257)
+	at scala.reflect.internal.Definitions$DefinitionsClass.ObjectClass(Definitions.scala:257)
+	at scala.reflect.internal.Definitions$DefinitionsClass.init(Definitions.scala:1394)
+	at scala.tools.nsc.Global$Run.<init>(Global.scala:1215)
+	at scala.tools.nsc.interpreter.IMain.compileSourcesKeepingRun(IMain.scala:432)
+	at scala.tools.nsc.interpreter.IMain$ReadEvalPrint.compileAndSaveRun(IMain.scala:855)
+	at scala.tools.nsc.interpreter.IMain$ReadEvalPrint.compile(IMain.scala:813)
+	at scala.tools.nsc.interpreter.IMain.bind(IMain.scala:675)
+	at scala.tools.nsc.interpreter.IMain.bind(IMain.scala:712)
+	at scala.tools.nsc.interpreter.IMain$$anonfun$quietBind$1.apply(IMain.scala:711)
+	at scala.tools.nsc.interpreter.IMain$$anonfun$quietBind$1.apply(IMain.scala:711)
+	at scala.tools.nsc.interpreter.IMain.beQuietDuring(IMain.scala:214)
+	at scala.tools.nsc.interpreter.IMain.quietBind(IMain.scala:711)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter$.loopPostInit$1(SparkScala211Interpreter.scala:142)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter$.org$apache$zeppelin$spark$SparkScala211Interpreter$$loopPostInit(SparkScala211Interpreter.scala:177)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter.open(SparkScala211Interpreter.scala:87)
+	at org.apache.zeppelin.spark.NewSparkInterpreter.open(NewSparkInterpreter.java:102)
+	... 15 more
+ INFO [2020-10-23 21:35:29,950] ({pool-2-thread-2} SchedulerFactory.java[jobFinished]:120) - Job 20201023-001936_119304475 finished by scheduler interpreter_1030962696
+ INFO [2020-10-23 21:45:42,142] ({pool-2-thread-5} SchedulerFactory.java[jobStarted]:114) - Job 20201023-001936_119304475 started by scheduler interpreter_1030962696
+ INFO [2020-10-23 21:45:42,557] ({pool-2-thread-5} PySparkInterpreter.java[open]:140) - IPython is not available, use the native PySparkInterpreter
+
+ INFO [2020-10-23 21:45:42,561] ({pool-2-thread-5} PySparkInterpreter.java[createPythonScript]:118) - File /tmp/zeppelin_pyspark-1846131357375741470.py created
+ INFO [2020-10-23 21:45:42,561] ({pool-2-thread-5} NewSparkInterpreter.java[open]:83) - Using Scala Version: 2.11
+ERROR [2020-10-23 21:45:42,753] ({pool-2-thread-5} NewSparkInterpreter.java[open]:127) - Fail to open SparkInterpreter
+ERROR [2020-10-23 21:45:42,753] ({pool-2-thread-5} PySparkInterpreter.java[open]:196) - Error
+org.apache.zeppelin.interpreter.InterpreterException: Fail to open SparkInterpreter
+	at org.apache.zeppelin.spark.NewSparkInterpreter.open(NewSparkInterpreter.java:128)
+	at org.apache.zeppelin.spark.SparkInterpreter.open(SparkInterpreter.java:62)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.spark.PySparkInterpreter.getSparkInterpreter(PySparkInterpreter.java:664)
+	at org.apache.zeppelin.spark.PySparkInterpreter.createGatewayServerAndStartScript(PySparkInterpreter.java:260)
+	at org.apache.zeppelin.spark.PySparkInterpreter.open(PySparkInterpreter.java:194)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.interpreter.remote.RemoteInterpreterServer$InterpretJob.jobRun(RemoteInterpreterServer.java:616)
+	at org.apache.zeppelin.scheduler.Job.run(Job.java:188)
+	at org.apache.zeppelin.scheduler.FIFOScheduler$1.run(FIFOScheduler.java:140)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: scala.reflect.internal.MissingRequirementError: object java.lang.Object in compiler mirror not found.
+	at scala.reflect.internal.MissingRequirementError$.signal(MissingRequirementError.scala:17)
+	at scala.reflect.internal.MissingRequirementError$.notFound(MissingRequirementError.scala:18)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:53)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:45)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:45)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:66)
+	at scala.reflect.internal.Mirrors$RootsBase.getClassByName(Mirrors.scala:102)
+	at scala.reflect.internal.Mirrors$RootsBase.getRequiredClass(Mirrors.scala:105)
+	at scala.reflect.internal.Definitions$DefinitionsClass.ObjectClass$lzycompute(Definitions.scala:257)
+	at scala.reflect.internal.Definitions$DefinitionsClass.ObjectClass(Definitions.scala:257)
+	at scala.reflect.internal.Definitions$DefinitionsClass.init(Definitions.scala:1394)
+	at scala.tools.nsc.Global$Run.<init>(Global.scala:1215)
+	at scala.tools.nsc.interpreter.IMain.compileSourcesKeepingRun(IMain.scala:432)
+	at scala.tools.nsc.interpreter.IMain$ReadEvalPrint.compileAndSaveRun(IMain.scala:855)
+	at scala.tools.nsc.interpreter.IMain$ReadEvalPrint.compile(IMain.scala:813)
+	at scala.tools.nsc.interpreter.IMain.bind(IMain.scala:675)
+	at scala.tools.nsc.interpreter.IMain.bind(IMain.scala:712)
+	at scala.tools.nsc.interpreter.IMain$$anonfun$quietBind$1.apply(IMain.scala:711)
+	at scala.tools.nsc.interpreter.IMain$$anonfun$quietBind$1.apply(IMain.scala:711)
+	at scala.tools.nsc.interpreter.IMain.beQuietDuring(IMain.scala:214)
+	at scala.tools.nsc.interpreter.IMain.quietBind(IMain.scala:711)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter$.loopPostInit$1(SparkScala211Interpreter.scala:142)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter$.org$apache$zeppelin$spark$SparkScala211Interpreter$$loopPostInit(SparkScala211Interpreter.scala:177)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter.open(SparkScala211Interpreter.scala:87)
+	at org.apache.zeppelin.spark.NewSparkInterpreter.open(NewSparkInterpreter.java:102)
+	... 15 more
+ERROR [2020-10-23 21:45:42,753] ({pool-2-thread-5} Job.java[run]:190) - Job failed
+org.apache.zeppelin.interpreter.InterpreterException: org.apache.zeppelin.interpreter.InterpreterException: Fail to open SparkInterpreter
+	at org.apache.zeppelin.spark.PySparkInterpreter.open(PySparkInterpreter.java:197)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.interpreter.remote.RemoteInterpreterServer$InterpretJob.jobRun(RemoteInterpreterServer.java:616)
+	at org.apache.zeppelin.scheduler.Job.run(Job.java:188)
+	at org.apache.zeppelin.scheduler.FIFOScheduler$1.run(FIFOScheduler.java:140)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.apache.zeppelin.interpreter.InterpreterException: Fail to open SparkInterpreter
+	at org.apache.zeppelin.spark.NewSparkInterpreter.open(NewSparkInterpreter.java:128)
+	at org.apache.zeppelin.spark.SparkInterpreter.open(SparkInterpreter.java:62)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.spark.PySparkInterpreter.getSparkInterpreter(PySparkInterpreter.java:664)
+	at org.apache.zeppelin.spark.PySparkInterpreter.createGatewayServerAndStartScript(PySparkInterpreter.java:260)
+	at org.apache.zeppelin.spark.PySparkInterpreter.open(PySparkInterpreter.java:194)
+	... 10 more
+Caused by: scala.reflect.internal.MissingRequirementError: object java.lang.Object in compiler mirror not found.
+	at scala.reflect.internal.MissingRequirementError$.signal(MissingRequirementError.scala:17)
+	at scala.reflect.internal.MissingRequirementError$.notFound(MissingRequirementError.scala:18)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:53)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:45)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:45)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:66)
+	at scala.reflect.internal.Mirrors$RootsBase.getClassByName(Mirrors.scala:102)
+	at scala.reflect.internal.Mirrors$RootsBase.getRequiredClass(Mirrors.scala:105)
+	at scala.reflect.internal.Definitions$DefinitionsClass.ObjectClass$lzycompute(Definitions.scala:257)
+	at scala.reflect.internal.Definitions$DefinitionsClass.ObjectClass(Definitions.scala:257)
+	at scala.reflect.internal.Definitions$DefinitionsClass.init(Definitions.scala:1394)
+	at scala.tools.nsc.Global$Run.<init>(Global.scala:1215)
+	at scala.tools.nsc.interpreter.IMain.compileSourcesKeepingRun(IMain.scala:432)
+	at scala.tools.nsc.interpreter.IMain$ReadEvalPrint.compileAndSaveRun(IMain.scala:855)
+	at scala.tools.nsc.interpreter.IMain$ReadEvalPrint.compile(IMain.scala:813)
+	at scala.tools.nsc.interpreter.IMain.bind(IMain.scala:675)
+	at scala.tools.nsc.interpreter.IMain.bind(IMain.scala:712)
+	at scala.tools.nsc.interpreter.IMain$$anonfun$quietBind$1.apply(IMain.scala:711)
+	at scala.tools.nsc.interpreter.IMain$$anonfun$quietBind$1.apply(IMain.scala:711)
+	at scala.tools.nsc.interpreter.IMain.beQuietDuring(IMain.scala:214)
+	at scala.tools.nsc.interpreter.IMain.quietBind(IMain.scala:711)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter$.loopPostInit$1(SparkScala211Interpreter.scala:142)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter$.org$apache$zeppelin$spark$SparkScala211Interpreter$$loopPostInit(SparkScala211Interpreter.scala:177)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter.open(SparkScala211Interpreter.scala:87)
+	at org.apache.zeppelin.spark.NewSparkInterpreter.open(NewSparkInterpreter.java:102)
+	... 15 more
+ INFO [2020-10-23 21:45:42,755] ({pool-2-thread-5} SchedulerFactory.java[jobFinished]:120) - Job 20201023-001936_119304475 finished by scheduler interpreter_1030962696
+ INFO [2020-10-23 22:27:55,412] ({main} RemoteInterpreterServer.java[main]:261) - URL:jar:file:/users/ssulca/diplodatos_bigdata/spark/zeppelin-0.8.2-bin-all/interpreter/spark/spark-interpreter-0.8.2.jar!/org/apache/zeppelin/interpreter/remote/RemoteInterpreterServer.class
+ INFO [2020-10-23 22:27:55,474] ({main} RemoteInterpreterServer.java[<init>]:162) - Launching ThriftServer at 200.16.29.165:33683
+ INFO [2020-10-23 22:27:55,480] ({main} RemoteInterpreterServer.java[<init>]:166) - Starting remote interpreter server on port 33683
+ INFO [2020-10-23 22:27:55,519] ({Thread-0} RemoteInterpreterServer.java[run]:203) - Starting remote interpreter server on port 33683
+ INFO [2020-10-23 22:27:56,528] ({Thread-1} RemoteInterpreterUtils.java[registerInterpreter]:165) - callbackHost: 200.16.29.165, callbackPort: 33251, callbackInfo: CallbackInfo(host:200.16.29.165, port:33683)
+ INFO [2020-10-23 22:27:56,782] ({pool-1-thread-1} RemoteInterpreterServer.java[createInterpreter]:311) - Instantiate interpreter org.apache.zeppelin.spark.SparkInterpreter
+ INFO [2020-10-23 22:27:56,786] ({pool-1-thread-1} RemoteInterpreterServer.java[createInterpreter]:311) - Instantiate interpreter org.apache.zeppelin.spark.SparkSqlInterpreter
+ INFO [2020-10-23 22:27:56,796] ({pool-1-thread-1} RemoteInterpreterServer.java[createInterpreter]:311) - Instantiate interpreter org.apache.zeppelin.spark.DepInterpreter
+ INFO [2020-10-23 22:27:56,810] ({pool-1-thread-1} RemoteInterpreterServer.java[createInterpreter]:311) - Instantiate interpreter org.apache.zeppelin.spark.PySparkInterpreter
+ INFO [2020-10-23 22:27:56,816] ({pool-1-thread-1} RemoteInterpreterServer.java[createInterpreter]:311) - Instantiate interpreter org.apache.zeppelin.spark.IPySparkInterpreter
+ INFO [2020-10-23 22:27:56,818] ({pool-1-thread-1} RemoteInterpreterServer.java[createInterpreter]:311) - Instantiate interpreter org.apache.zeppelin.spark.SparkRInterpreter
+ INFO [2020-10-23 22:27:56,909] ({pool-1-thread-3} ZeppelinConfiguration.java[create]:121) - Load configuration from file:/users/ssulca/diplodatos_bigdata/spark/zeppelin-0.8.2-bin-all/zeppelin-site.xml
+ WARN [2020-10-23 22:27:57,029] ({pool-1-thread-3} ZeppelinConfiguration.java[create]:124) - Failed to load configuration from file:/users/ssulca/diplodatos_bigdata/spark/zeppelin-0.8.2-bin-all/zeppelin-site.xml proceeding with a default
+org.apache.commons.configuration.ConfigurationException: Error parsing file:/users/ssulca/diplodatos_bigdata/spark/zeppelin-0.8.2-bin-all/zeppelin-site.xml
+	at org.apache.commons.configuration.XMLConfiguration.load(XMLConfiguration.java:950)
+	at org.apache.commons.configuration.XMLConfiguration.load(XMLConfiguration.java:908)
+	at org.apache.commons.configuration.XMLConfiguration$XMLFileConfigurationDelegate.load(XMLConfiguration.java:1583)
+	at org.apache.commons.configuration.AbstractFileConfiguration.load(AbstractFileConfiguration.java:324)
+	at org.apache.commons.configuration.AbstractHierarchicalFileConfiguration.load(AbstractHierarchicalFileConfiguration.java:199)
+	at org.apache.zeppelin.conf.ZeppelinConfiguration.<init>(ZeppelinConfiguration.java:52)
+	at org.apache.zeppelin.conf.ZeppelinConfiguration.create(ZeppelinConfiguration.java:122)
+	at org.apache.zeppelin.scheduler.SchedulerFactory.<init>(SchedulerFactory.java:56)
+	at org.apache.zeppelin.scheduler.SchedulerFactory.singleton(SchedulerFactory.java:45)
+	at org.apache.zeppelin.interpreter.Interpreter.getScheduler(Interpreter.java:177)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.getScheduler(LazyOpenInterpreter.java:131)
+	at org.apache.zeppelin.interpreter.remote.RemoteInterpreterServer.getStatus(RemoteInterpreterServer.java:928)
+	at org.apache.zeppelin.interpreter.thrift.RemoteInterpreterService$Processor$getStatus.getResult(RemoteInterpreterService.java:1980)
+	at org.apache.zeppelin.interpreter.thrift.RemoteInterpreterService$Processor$getStatus.getResult(RemoteInterpreterService.java:1965)
+	at org.apache.thrift.ProcessFunction.process(ProcessFunction.java:39)
+	at org.apache.thrift.TBaseProcessor.process(TBaseProcessor.java:39)
+	at org.apache.thrift.server.TThreadPoolServer$WorkerProcess.run(TThreadPoolServer.java:285)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.xml.sax.SAXParseException; Premature end of file.
+	at org.apache.xerces.parsers.DOMParser.parse(Unknown Source)
+	at org.apache.xerces.jaxp.DocumentBuilderImpl.parse(Unknown Source)
+	at org.apache.commons.configuration.XMLConfiguration.load(XMLConfiguration.java:942)
+	... 19 more
+ INFO [2020-10-23 22:27:57,050] ({pool-1-thread-3} ZeppelinConfiguration.java[create]:129) - Server Host: 127.0.0.1
+ INFO [2020-10-23 22:27:57,051] ({pool-1-thread-3} ZeppelinConfiguration.java[create]:131) - Server Port: 8080
+ INFO [2020-10-23 22:27:57,051] ({pool-1-thread-3} ZeppelinConfiguration.java[create]:135) - Context Path: /
+ INFO [2020-10-23 22:27:57,054] ({pool-1-thread-3} ZeppelinConfiguration.java[create]:136) - Zeppelin Version: 0.8.2
+ INFO [2020-10-23 22:27:57,055] ({pool-1-thread-3} SchedulerFactory.java[<init>]:59) - Scheduler Thread Pool Size: 100
+ INFO [2020-10-23 22:27:57,060] ({pool-2-thread-5} SchedulerFactory.java[jobStarted]:114) - Job 20201023-001936_119304475 started by scheduler interpreter_2072180324
+ INFO [2020-10-23 22:27:57,503] ({pool-2-thread-5} PySparkInterpreter.java[open]:140) - IPython is not available, use the native PySparkInterpreter
+
+ INFO [2020-10-23 22:27:57,512] ({pool-2-thread-5} PySparkInterpreter.java[createPythonScript]:118) - File /tmp/zeppelin_pyspark-9713858992462794222.py created
+ INFO [2020-10-23 22:27:57,560] ({pool-2-thread-5} NewSparkInterpreter.java[open]:83) - Using Scala Version: 2.11
+ERROR [2020-10-23 22:27:59,202] ({pool-2-thread-5} NewSparkInterpreter.java[open]:127) - Fail to open SparkInterpreter
+ERROR [2020-10-23 22:27:59,203] ({pool-2-thread-5} PySparkInterpreter.java[open]:196) - Error
+org.apache.zeppelin.interpreter.InterpreterException: Fail to open SparkInterpreter
+	at org.apache.zeppelin.spark.NewSparkInterpreter.open(NewSparkInterpreter.java:128)
+	at org.apache.zeppelin.spark.SparkInterpreter.open(SparkInterpreter.java:62)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.spark.PySparkInterpreter.getSparkInterpreter(PySparkInterpreter.java:664)
+	at org.apache.zeppelin.spark.PySparkInterpreter.createGatewayServerAndStartScript(PySparkInterpreter.java:260)
+	at org.apache.zeppelin.spark.PySparkInterpreter.open(PySparkInterpreter.java:194)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.interpreter.remote.RemoteInterpreterServer$InterpretJob.jobRun(RemoteInterpreterServer.java:616)
+	at org.apache.zeppelin.scheduler.Job.run(Job.java:188)
+	at org.apache.zeppelin.scheduler.FIFOScheduler$1.run(FIFOScheduler.java:140)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: scala.reflect.internal.MissingRequirementError: object java.lang.Object in compiler mirror not found.
+	at scala.reflect.internal.MissingRequirementError$.signal(MissingRequirementError.scala:17)
+	at scala.reflect.internal.MissingRequirementError$.notFound(MissingRequirementError.scala:18)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:53)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:45)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:45)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:66)
+	at scala.reflect.internal.Mirrors$RootsBase.getClassByName(Mirrors.scala:102)
+	at scala.reflect.internal.Mirrors$RootsBase.getRequiredClass(Mirrors.scala:105)
+	at scala.reflect.internal.Definitions$DefinitionsClass.ObjectClass$lzycompute(Definitions.scala:257)
+	at scala.reflect.internal.Definitions$DefinitionsClass.ObjectClass(Definitions.scala:257)
+	at scala.reflect.internal.Definitions$DefinitionsClass.init(Definitions.scala:1394)
+	at scala.tools.nsc.Global$Run.<init>(Global.scala:1215)
+	at scala.tools.nsc.interpreter.IMain.compileSourcesKeepingRun(IMain.scala:432)
+	at scala.tools.nsc.interpreter.IMain$ReadEvalPrint.compileAndSaveRun(IMain.scala:855)
+	at scala.tools.nsc.interpreter.IMain$ReadEvalPrint.compile(IMain.scala:813)
+	at scala.tools.nsc.interpreter.IMain.bind(IMain.scala:675)
+	at scala.tools.nsc.interpreter.IMain.bind(IMain.scala:712)
+	at scala.tools.nsc.interpreter.IMain$$anonfun$quietBind$1.apply(IMain.scala:711)
+	at scala.tools.nsc.interpreter.IMain$$anonfun$quietBind$1.apply(IMain.scala:711)
+	at scala.tools.nsc.interpreter.IMain.beQuietDuring(IMain.scala:214)
+	at scala.tools.nsc.interpreter.IMain.quietBind(IMain.scala:711)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter$.loopPostInit$1(SparkScala211Interpreter.scala:142)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter$.org$apache$zeppelin$spark$SparkScala211Interpreter$$loopPostInit(SparkScala211Interpreter.scala:177)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter.open(SparkScala211Interpreter.scala:87)
+	at org.apache.zeppelin.spark.NewSparkInterpreter.open(NewSparkInterpreter.java:102)
+	... 15 more
+ERROR [2020-10-23 22:27:59,204] ({pool-2-thread-5} Job.java[run]:190) - Job failed
+org.apache.zeppelin.interpreter.InterpreterException: org.apache.zeppelin.interpreter.InterpreterException: Fail to open SparkInterpreter
+	at org.apache.zeppelin.spark.PySparkInterpreter.open(PySparkInterpreter.java:197)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.interpreter.remote.RemoteInterpreterServer$InterpretJob.jobRun(RemoteInterpreterServer.java:616)
+	at org.apache.zeppelin.scheduler.Job.run(Job.java:188)
+	at org.apache.zeppelin.scheduler.FIFOScheduler$1.run(FIFOScheduler.java:140)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.apache.zeppelin.interpreter.InterpreterException: Fail to open SparkInterpreter
+	at org.apache.zeppelin.spark.NewSparkInterpreter.open(NewSparkInterpreter.java:128)
+	at org.apache.zeppelin.spark.SparkInterpreter.open(SparkInterpreter.java:62)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.spark.PySparkInterpreter.getSparkInterpreter(PySparkInterpreter.java:664)
+	at org.apache.zeppelin.spark.PySparkInterpreter.createGatewayServerAndStartScript(PySparkInterpreter.java:260)
+	at org.apache.zeppelin.spark.PySparkInterpreter.open(PySparkInterpreter.java:194)
+	... 10 more
+Caused by: scala.reflect.internal.MissingRequirementError: object java.lang.Object in compiler mirror not found.
+	at scala.reflect.internal.MissingRequirementError$.signal(MissingRequirementError.scala:17)
+	at scala.reflect.internal.MissingRequirementError$.notFound(MissingRequirementError.scala:18)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:53)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:45)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:45)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:66)
+	at scala.reflect.internal.Mirrors$RootsBase.getClassByName(Mirrors.scala:102)
+	at scala.reflect.internal.Mirrors$RootsBase.getRequiredClass(Mirrors.scala:105)
+	at scala.reflect.internal.Definitions$DefinitionsClass.ObjectClass$lzycompute(Definitions.scala:257)
+	at scala.reflect.internal.Definitions$DefinitionsClass.ObjectClass(Definitions.scala:257)
+	at scala.reflect.internal.Definitions$DefinitionsClass.init(Definitions.scala:1394)
+	at scala.tools.nsc.Global$Run.<init>(Global.scala:1215)
+	at scala.tools.nsc.interpreter.IMain.compileSourcesKeepingRun(IMain.scala:432)
+	at scala.tools.nsc.interpreter.IMain$ReadEvalPrint.compileAndSaveRun(IMain.scala:855)
+	at scala.tools.nsc.interpreter.IMain$ReadEvalPrint.compile(IMain.scala:813)
+	at scala.tools.nsc.interpreter.IMain.bind(IMain.scala:675)
+	at scala.tools.nsc.interpreter.IMain.bind(IMain.scala:712)
+	at scala.tools.nsc.interpreter.IMain$$anonfun$quietBind$1.apply(IMain.scala:711)
+	at scala.tools.nsc.interpreter.IMain$$anonfun$quietBind$1.apply(IMain.scala:711)
+	at scala.tools.nsc.interpreter.IMain.beQuietDuring(IMain.scala:214)
+	at scala.tools.nsc.interpreter.IMain.quietBind(IMain.scala:711)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter$.loopPostInit$1(SparkScala211Interpreter.scala:142)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter$.org$apache$zeppelin$spark$SparkScala211Interpreter$$loopPostInit(SparkScala211Interpreter.scala:177)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter.open(SparkScala211Interpreter.scala:87)
+	at org.apache.zeppelin.spark.NewSparkInterpreter.open(NewSparkInterpreter.java:102)
+	... 15 more
+ INFO [2020-10-23 22:27:59,213] ({pool-2-thread-5} SchedulerFactory.java[jobFinished]:120) - Job 20201023-001936_119304475 finished by scheduler interpreter_2072180324
+ INFO [2020-10-23 22:39:08,371] ({pool-2-thread-5} SchedulerFactory.java[jobStarted]:114) - Job 20201023-001936_119304475 started by scheduler interpreter_2072180324
+ INFO [2020-10-23 22:39:08,789] ({pool-2-thread-5} PySparkInterpreter.java[open]:140) - IPython is not available, use the native PySparkInterpreter
+
+ INFO [2020-10-23 22:39:08,794] ({pool-2-thread-5} PySparkInterpreter.java[createPythonScript]:118) - File /tmp/zeppelin_pyspark-9713858992462794222.py created
+ INFO [2020-10-23 22:39:08,794] ({pool-2-thread-5} NewSparkInterpreter.java[open]:83) - Using Scala Version: 2.11
+ERROR [2020-10-23 22:39:09,003] ({pool-2-thread-5} NewSparkInterpreter.java[open]:127) - Fail to open SparkInterpreter
+ERROR [2020-10-23 22:39:09,003] ({pool-2-thread-5} PySparkInterpreter.java[open]:196) - Error
+org.apache.zeppelin.interpreter.InterpreterException: Fail to open SparkInterpreter
+	at org.apache.zeppelin.spark.NewSparkInterpreter.open(NewSparkInterpreter.java:128)
+	at org.apache.zeppelin.spark.SparkInterpreter.open(SparkInterpreter.java:62)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.spark.PySparkInterpreter.getSparkInterpreter(PySparkInterpreter.java:664)
+	at org.apache.zeppelin.spark.PySparkInterpreter.createGatewayServerAndStartScript(PySparkInterpreter.java:260)
+	at org.apache.zeppelin.spark.PySparkInterpreter.open(PySparkInterpreter.java:194)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.interpreter.remote.RemoteInterpreterServer$InterpretJob.jobRun(RemoteInterpreterServer.java:616)
+	at org.apache.zeppelin.scheduler.Job.run(Job.java:188)
+	at org.apache.zeppelin.scheduler.FIFOScheduler$1.run(FIFOScheduler.java:140)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: scala.reflect.internal.MissingRequirementError: object java.lang.Object in compiler mirror not found.
+	at scala.reflect.internal.MissingRequirementError$.signal(MissingRequirementError.scala:17)
+	at scala.reflect.internal.MissingRequirementError$.notFound(MissingRequirementError.scala:18)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:53)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:45)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:45)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:66)
+	at scala.reflect.internal.Mirrors$RootsBase.getClassByName(Mirrors.scala:102)
+	at scala.reflect.internal.Mirrors$RootsBase.getRequiredClass(Mirrors.scala:105)
+	at scala.reflect.internal.Definitions$DefinitionsClass.ObjectClass$lzycompute(Definitions.scala:257)
+	at scala.reflect.internal.Definitions$DefinitionsClass.ObjectClass(Definitions.scala:257)
+	at scala.reflect.internal.Definitions$DefinitionsClass.init(Definitions.scala:1394)
+	at scala.tools.nsc.Global$Run.<init>(Global.scala:1215)
+	at scala.tools.nsc.interpreter.IMain.compileSourcesKeepingRun(IMain.scala:432)
+	at scala.tools.nsc.interpreter.IMain$ReadEvalPrint.compileAndSaveRun(IMain.scala:855)
+	at scala.tools.nsc.interpreter.IMain$ReadEvalPrint.compile(IMain.scala:813)
+	at scala.tools.nsc.interpreter.IMain.bind(IMain.scala:675)
+	at scala.tools.nsc.interpreter.IMain.bind(IMain.scala:712)
+	at scala.tools.nsc.interpreter.IMain$$anonfun$quietBind$1.apply(IMain.scala:711)
+	at scala.tools.nsc.interpreter.IMain$$anonfun$quietBind$1.apply(IMain.scala:711)
+	at scala.tools.nsc.interpreter.IMain.beQuietDuring(IMain.scala:214)
+	at scala.tools.nsc.interpreter.IMain.quietBind(IMain.scala:711)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter$.loopPostInit$1(SparkScala211Interpreter.scala:142)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter$.org$apache$zeppelin$spark$SparkScala211Interpreter$$loopPostInit(SparkScala211Interpreter.scala:177)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter.open(SparkScala211Interpreter.scala:87)
+	at org.apache.zeppelin.spark.NewSparkInterpreter.open(NewSparkInterpreter.java:102)
+	... 15 more
+ERROR [2020-10-23 22:39:09,004] ({pool-2-thread-5} Job.java[run]:190) - Job failed
+org.apache.zeppelin.interpreter.InterpreterException: org.apache.zeppelin.interpreter.InterpreterException: Fail to open SparkInterpreter
+	at org.apache.zeppelin.spark.PySparkInterpreter.open(PySparkInterpreter.java:197)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.interpreter.remote.RemoteInterpreterServer$InterpretJob.jobRun(RemoteInterpreterServer.java:616)
+	at org.apache.zeppelin.scheduler.Job.run(Job.java:188)
+	at org.apache.zeppelin.scheduler.FIFOScheduler$1.run(FIFOScheduler.java:140)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.apache.zeppelin.interpreter.InterpreterException: Fail to open SparkInterpreter
+	at org.apache.zeppelin.spark.NewSparkInterpreter.open(NewSparkInterpreter.java:128)
+	at org.apache.zeppelin.spark.SparkInterpreter.open(SparkInterpreter.java:62)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.spark.PySparkInterpreter.getSparkInterpreter(PySparkInterpreter.java:664)
+	at org.apache.zeppelin.spark.PySparkInterpreter.createGatewayServerAndStartScript(PySparkInterpreter.java:260)
+	at org.apache.zeppelin.spark.PySparkInterpreter.open(PySparkInterpreter.java:194)
+	... 10 more
+Caused by: scala.reflect.internal.MissingRequirementError: object java.lang.Object in compiler mirror not found.
+	at scala.reflect.internal.MissingRequirementError$.signal(MissingRequirementError.scala:17)
+	at scala.reflect.internal.MissingRequirementError$.notFound(MissingRequirementError.scala:18)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:53)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:45)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:45)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:66)
+	at scala.reflect.internal.Mirrors$RootsBase.getClassByName(Mirrors.scala:102)
+	at scala.reflect.internal.Mirrors$RootsBase.getRequiredClass(Mirrors.scala:105)
+	at scala.reflect.internal.Definitions$DefinitionsClass.ObjectClass$lzycompute(Definitions.scala:257)
+	at scala.reflect.internal.Definitions$DefinitionsClass.ObjectClass(Definitions.scala:257)
+	at scala.reflect.internal.Definitions$DefinitionsClass.init(Definitions.scala:1394)
+	at scala.tools.nsc.Global$Run.<init>(Global.scala:1215)
+	at scala.tools.nsc.interpreter.IMain.compileSourcesKeepingRun(IMain.scala:432)
+	at scala.tools.nsc.interpreter.IMain$ReadEvalPrint.compileAndSaveRun(IMain.scala:855)
+	at scala.tools.nsc.interpreter.IMain$ReadEvalPrint.compile(IMain.scala:813)
+	at scala.tools.nsc.interpreter.IMain.bind(IMain.scala:675)
+	at scala.tools.nsc.interpreter.IMain.bind(IMain.scala:712)
+	at scala.tools.nsc.interpreter.IMain$$anonfun$quietBind$1.apply(IMain.scala:711)
+	at scala.tools.nsc.interpreter.IMain$$anonfun$quietBind$1.apply(IMain.scala:711)
+	at scala.tools.nsc.interpreter.IMain.beQuietDuring(IMain.scala:214)
+	at scala.tools.nsc.interpreter.IMain.quietBind(IMain.scala:711)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter$.loopPostInit$1(SparkScala211Interpreter.scala:142)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter$.org$apache$zeppelin$spark$SparkScala211Interpreter$$loopPostInit(SparkScala211Interpreter.scala:177)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter.open(SparkScala211Interpreter.scala:87)
+	at org.apache.zeppelin.spark.NewSparkInterpreter.open(NewSparkInterpreter.java:102)
+	... 15 more
+ INFO [2020-10-23 22:39:09,006] ({pool-2-thread-5} SchedulerFactory.java[jobFinished]:120) - Job 20201023-001936_119304475 finished by scheduler interpreter_2072180324
+ INFO [2020-10-23 22:39:44,751] ({pool-2-thread-6} SchedulerFactory.java[jobStarted]:114) - Job 20201023-001936_119304475 started by scheduler interpreter_2072180324
+ INFO [2020-10-23 22:39:45,184] ({pool-2-thread-6} PySparkInterpreter.java[open]:140) - IPython is not available, use the native PySparkInterpreter
+
+ INFO [2020-10-23 22:39:45,188] ({pool-2-thread-6} PySparkInterpreter.java[createPythonScript]:118) - File /tmp/zeppelin_pyspark-9713858992462794222.py created
+ INFO [2020-10-23 22:39:45,189] ({pool-2-thread-6} NewSparkInterpreter.java[open]:83) - Using Scala Version: 2.11
+ERROR [2020-10-23 22:39:45,361] ({pool-2-thread-6} NewSparkInterpreter.java[open]:127) - Fail to open SparkInterpreter
+ERROR [2020-10-23 22:39:45,362] ({pool-2-thread-6} PySparkInterpreter.java[open]:196) - Error
+org.apache.zeppelin.interpreter.InterpreterException: Fail to open SparkInterpreter
+	at org.apache.zeppelin.spark.NewSparkInterpreter.open(NewSparkInterpreter.java:128)
+	at org.apache.zeppelin.spark.SparkInterpreter.open(SparkInterpreter.java:62)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.spark.PySparkInterpreter.getSparkInterpreter(PySparkInterpreter.java:664)
+	at org.apache.zeppelin.spark.PySparkInterpreter.createGatewayServerAndStartScript(PySparkInterpreter.java:260)
+	at org.apache.zeppelin.spark.PySparkInterpreter.open(PySparkInterpreter.java:194)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.interpreter.remote.RemoteInterpreterServer$InterpretJob.jobRun(RemoteInterpreterServer.java:616)
+	at org.apache.zeppelin.scheduler.Job.run(Job.java:188)
+	at org.apache.zeppelin.scheduler.FIFOScheduler$1.run(FIFOScheduler.java:140)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: scala.reflect.internal.MissingRequirementError: object java.lang.Object in compiler mirror not found.
+	at scala.reflect.internal.MissingRequirementError$.signal(MissingRequirementError.scala:17)
+	at scala.reflect.internal.MissingRequirementError$.notFound(MissingRequirementError.scala:18)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:53)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:45)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:45)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:66)
+	at scala.reflect.internal.Mirrors$RootsBase.getClassByName(Mirrors.scala:102)
+	at scala.reflect.internal.Mirrors$RootsBase.getRequiredClass(Mirrors.scala:105)
+	at scala.reflect.internal.Definitions$DefinitionsClass.ObjectClass$lzycompute(Definitions.scala:257)
+	at scala.reflect.internal.Definitions$DefinitionsClass.ObjectClass(Definitions.scala:257)
+	at scala.reflect.internal.Definitions$DefinitionsClass.init(Definitions.scala:1394)
+	at scala.tools.nsc.Global$Run.<init>(Global.scala:1215)
+	at scala.tools.nsc.interpreter.IMain.compileSourcesKeepingRun(IMain.scala:432)
+	at scala.tools.nsc.interpreter.IMain$ReadEvalPrint.compileAndSaveRun(IMain.scala:855)
+	at scala.tools.nsc.interpreter.IMain$ReadEvalPrint.compile(IMain.scala:813)
+	at scala.tools.nsc.interpreter.IMain.bind(IMain.scala:675)
+	at scala.tools.nsc.interpreter.IMain.bind(IMain.scala:712)
+	at scala.tools.nsc.interpreter.IMain$$anonfun$quietBind$1.apply(IMain.scala:711)
+	at scala.tools.nsc.interpreter.IMain$$anonfun$quietBind$1.apply(IMain.scala:711)
+	at scala.tools.nsc.interpreter.IMain.beQuietDuring(IMain.scala:214)
+	at scala.tools.nsc.interpreter.IMain.quietBind(IMain.scala:711)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter$.loopPostInit$1(SparkScala211Interpreter.scala:142)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter$.org$apache$zeppelin$spark$SparkScala211Interpreter$$loopPostInit(SparkScala211Interpreter.scala:177)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter.open(SparkScala211Interpreter.scala:87)
+	at org.apache.zeppelin.spark.NewSparkInterpreter.open(NewSparkInterpreter.java:102)
+	... 15 more
+ERROR [2020-10-23 22:39:45,363] ({pool-2-thread-6} Job.java[run]:190) - Job failed
+org.apache.zeppelin.interpreter.InterpreterException: org.apache.zeppelin.interpreter.InterpreterException: Fail to open SparkInterpreter
+	at org.apache.zeppelin.spark.PySparkInterpreter.open(PySparkInterpreter.java:197)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.interpreter.remote.RemoteInterpreterServer$InterpretJob.jobRun(RemoteInterpreterServer.java:616)
+	at org.apache.zeppelin.scheduler.Job.run(Job.java:188)
+	at org.apache.zeppelin.scheduler.FIFOScheduler$1.run(FIFOScheduler.java:140)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.apache.zeppelin.interpreter.InterpreterException: Fail to open SparkInterpreter
+	at org.apache.zeppelin.spark.NewSparkInterpreter.open(NewSparkInterpreter.java:128)
+	at org.apache.zeppelin.spark.SparkInterpreter.open(SparkInterpreter.java:62)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.spark.PySparkInterpreter.getSparkInterpreter(PySparkInterpreter.java:664)
+	at org.apache.zeppelin.spark.PySparkInterpreter.createGatewayServerAndStartScript(PySparkInterpreter.java:260)
+	at org.apache.zeppelin.spark.PySparkInterpreter.open(PySparkInterpreter.java:194)
+	... 10 more
+Caused by: scala.reflect.internal.MissingRequirementError: object java.lang.Object in compiler mirror not found.
+	at scala.reflect.internal.MissingRequirementError$.signal(MissingRequirementError.scala:17)
+	at scala.reflect.internal.MissingRequirementError$.notFound(MissingRequirementError.scala:18)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:53)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:45)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:45)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:66)
+	at scala.reflect.internal.Mirrors$RootsBase.getClassByName(Mirrors.scala:102)
+	at scala.reflect.internal.Mirrors$RootsBase.getRequiredClass(Mirrors.scala:105)
+	at scala.reflect.internal.Definitions$DefinitionsClass.ObjectClass$lzycompute(Definitions.scala:257)
+	at scala.reflect.internal.Definitions$DefinitionsClass.ObjectClass(Definitions.scala:257)
+	at scala.reflect.internal.Definitions$DefinitionsClass.init(Definitions.scala:1394)
+	at scala.tools.nsc.Global$Run.<init>(Global.scala:1215)
+	at scala.tools.nsc.interpreter.IMain.compileSourcesKeepingRun(IMain.scala:432)
+	at scala.tools.nsc.interpreter.IMain$ReadEvalPrint.compileAndSaveRun(IMain.scala:855)
+	at scala.tools.nsc.interpreter.IMain$ReadEvalPrint.compile(IMain.scala:813)
+	at scala.tools.nsc.interpreter.IMain.bind(IMain.scala:675)
+	at scala.tools.nsc.interpreter.IMain.bind(IMain.scala:712)
+	at scala.tools.nsc.interpreter.IMain$$anonfun$quietBind$1.apply(IMain.scala:711)
+	at scala.tools.nsc.interpreter.IMain$$anonfun$quietBind$1.apply(IMain.scala:711)
+	at scala.tools.nsc.interpreter.IMain.beQuietDuring(IMain.scala:214)
+	at scala.tools.nsc.interpreter.IMain.quietBind(IMain.scala:711)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter$.loopPostInit$1(SparkScala211Interpreter.scala:142)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter$.org$apache$zeppelin$spark$SparkScala211Interpreter$$loopPostInit(SparkScala211Interpreter.scala:177)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter.open(SparkScala211Interpreter.scala:87)
+	at org.apache.zeppelin.spark.NewSparkInterpreter.open(NewSparkInterpreter.java:102)
+	... 15 more
+ INFO [2020-10-23 22:39:45,365] ({pool-2-thread-6} SchedulerFactory.java[jobFinished]:120) - Job 20201023-001936_119304475 finished by scheduler interpreter_2072180324
+ INFO [2020-10-23 22:42:12,217] ({pool-2-thread-5} SchedulerFactory.java[jobStarted]:114) - Job 20201023-001936_119304475 started by scheduler interpreter_2072180324
+ INFO [2020-10-23 22:42:12,638] ({pool-2-thread-5} PySparkInterpreter.java[open]:140) - IPython is not available, use the native PySparkInterpreter
+
+ INFO [2020-10-23 22:42:12,641] ({pool-2-thread-5} PySparkInterpreter.java[createPythonScript]:118) - File /tmp/zeppelin_pyspark-9713858992462794222.py created
+ INFO [2020-10-23 22:42:12,642] ({pool-2-thread-5} NewSparkInterpreter.java[open]:83) - Using Scala Version: 2.11
+ERROR [2020-10-23 22:42:12,801] ({pool-2-thread-5} NewSparkInterpreter.java[open]:127) - Fail to open SparkInterpreter
+ERROR [2020-10-23 22:42:12,801] ({pool-2-thread-5} PySparkInterpreter.java[open]:196) - Error
+org.apache.zeppelin.interpreter.InterpreterException: Fail to open SparkInterpreter
+	at org.apache.zeppelin.spark.NewSparkInterpreter.open(NewSparkInterpreter.java:128)
+	at org.apache.zeppelin.spark.SparkInterpreter.open(SparkInterpreter.java:62)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.spark.PySparkInterpreter.getSparkInterpreter(PySparkInterpreter.java:664)
+	at org.apache.zeppelin.spark.PySparkInterpreter.createGatewayServerAndStartScript(PySparkInterpreter.java:260)
+	at org.apache.zeppelin.spark.PySparkInterpreter.open(PySparkInterpreter.java:194)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.interpreter.remote.RemoteInterpreterServer$InterpretJob.jobRun(RemoteInterpreterServer.java:616)
+	at org.apache.zeppelin.scheduler.Job.run(Job.java:188)
+	at org.apache.zeppelin.scheduler.FIFOScheduler$1.run(FIFOScheduler.java:140)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: scala.reflect.internal.MissingRequirementError: object java.lang.Object in compiler mirror not found.
+	at scala.reflect.internal.MissingRequirementError$.signal(MissingRequirementError.scala:17)
+	at scala.reflect.internal.MissingRequirementError$.notFound(MissingRequirementError.scala:18)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:53)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:45)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:45)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:66)
+	at scala.reflect.internal.Mirrors$RootsBase.getClassByName(Mirrors.scala:102)
+	at scala.reflect.internal.Mirrors$RootsBase.getRequiredClass(Mirrors.scala:105)
+	at scala.reflect.internal.Definitions$DefinitionsClass.ObjectClass$lzycompute(Definitions.scala:257)
+	at scala.reflect.internal.Definitions$DefinitionsClass.ObjectClass(Definitions.scala:257)
+	at scala.reflect.internal.Definitions$DefinitionsClass.init(Definitions.scala:1394)
+	at scala.tools.nsc.Global$Run.<init>(Global.scala:1215)
+	at scala.tools.nsc.interpreter.IMain.compileSourcesKeepingRun(IMain.scala:432)
+	at scala.tools.nsc.interpreter.IMain$ReadEvalPrint.compileAndSaveRun(IMain.scala:855)
+	at scala.tools.nsc.interpreter.IMain$ReadEvalPrint.compile(IMain.scala:813)
+	at scala.tools.nsc.interpreter.IMain.bind(IMain.scala:675)
+	at scala.tools.nsc.interpreter.IMain.bind(IMain.scala:712)
+	at scala.tools.nsc.interpreter.IMain$$anonfun$quietBind$1.apply(IMain.scala:711)
+	at scala.tools.nsc.interpreter.IMain$$anonfun$quietBind$1.apply(IMain.scala:711)
+	at scala.tools.nsc.interpreter.IMain.beQuietDuring(IMain.scala:214)
+	at scala.tools.nsc.interpreter.IMain.quietBind(IMain.scala:711)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter$.loopPostInit$1(SparkScala211Interpreter.scala:142)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter$.org$apache$zeppelin$spark$SparkScala211Interpreter$$loopPostInit(SparkScala211Interpreter.scala:177)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter.open(SparkScala211Interpreter.scala:87)
+	at org.apache.zeppelin.spark.NewSparkInterpreter.open(NewSparkInterpreter.java:102)
+	... 15 more
+ERROR [2020-10-23 22:42:12,801] ({pool-2-thread-5} Job.java[run]:190) - Job failed
+org.apache.zeppelin.interpreter.InterpreterException: org.apache.zeppelin.interpreter.InterpreterException: Fail to open SparkInterpreter
+	at org.apache.zeppelin.spark.PySparkInterpreter.open(PySparkInterpreter.java:197)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.interpreter.remote.RemoteInterpreterServer$InterpretJob.jobRun(RemoteInterpreterServer.java:616)
+	at org.apache.zeppelin.scheduler.Job.run(Job.java:188)
+	at org.apache.zeppelin.scheduler.FIFOScheduler$1.run(FIFOScheduler.java:140)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.apache.zeppelin.interpreter.InterpreterException: Fail to open SparkInterpreter
+	at org.apache.zeppelin.spark.NewSparkInterpreter.open(NewSparkInterpreter.java:128)
+	at org.apache.zeppelin.spark.SparkInterpreter.open(SparkInterpreter.java:62)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.spark.PySparkInterpreter.getSparkInterpreter(PySparkInterpreter.java:664)
+	at org.apache.zeppelin.spark.PySparkInterpreter.createGatewayServerAndStartScript(PySparkInterpreter.java:260)
+	at org.apache.zeppelin.spark.PySparkInterpreter.open(PySparkInterpreter.java:194)
+	... 10 more
+Caused by: scala.reflect.internal.MissingRequirementError: object java.lang.Object in compiler mirror not found.
+	at scala.reflect.internal.MissingRequirementError$.signal(MissingRequirementError.scala:17)
+	at scala.reflect.internal.MissingRequirementError$.notFound(MissingRequirementError.scala:18)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:53)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:45)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:45)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:66)
+	at scala.reflect.internal.Mirrors$RootsBase.getClassByName(Mirrors.scala:102)
+	at scala.reflect.internal.Mirrors$RootsBase.getRequiredClass(Mirrors.scala:105)
+	at scala.reflect.internal.Definitions$DefinitionsClass.ObjectClass$lzycompute(Definitions.scala:257)
+	at scala.reflect.internal.Definitions$DefinitionsClass.ObjectClass(Definitions.scala:257)
+	at scala.reflect.internal.Definitions$DefinitionsClass.init(Definitions.scala:1394)
+	at scala.tools.nsc.Global$Run.<init>(Global.scala:1215)
+	at scala.tools.nsc.interpreter.IMain.compileSourcesKeepingRun(IMain.scala:432)
+	at scala.tools.nsc.interpreter.IMain$ReadEvalPrint.compileAndSaveRun(IMain.scala:855)
+	at scala.tools.nsc.interpreter.IMain$ReadEvalPrint.compile(IMain.scala:813)
+	at scala.tools.nsc.interpreter.IMain.bind(IMain.scala:675)
+	at scala.tools.nsc.interpreter.IMain.bind(IMain.scala:712)
+	at scala.tools.nsc.interpreter.IMain$$anonfun$quietBind$1.apply(IMain.scala:711)
+	at scala.tools.nsc.interpreter.IMain$$anonfun$quietBind$1.apply(IMain.scala:711)
+	at scala.tools.nsc.interpreter.IMain.beQuietDuring(IMain.scala:214)
+	at scala.tools.nsc.interpreter.IMain.quietBind(IMain.scala:711)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter$.loopPostInit$1(SparkScala211Interpreter.scala:142)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter$.org$apache$zeppelin$spark$SparkScala211Interpreter$$loopPostInit(SparkScala211Interpreter.scala:177)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter.open(SparkScala211Interpreter.scala:87)
+	at org.apache.zeppelin.spark.NewSparkInterpreter.open(NewSparkInterpreter.java:102)
+	... 15 more
+ INFO [2020-10-23 22:42:12,803] ({pool-2-thread-5} SchedulerFactory.java[jobFinished]:120) - Job 20201023-001936_119304475 finished by scheduler interpreter_2072180324
+ INFO [2020-10-23 22:42:37,157] ({pool-2-thread-7} SchedulerFactory.java[jobStarted]:114) - Job 20201023-001936_119304475 started by scheduler interpreter_1296324519
+ INFO [2020-10-23 22:42:37,158] ({pool-2-thread-7} NewSparkInterpreter.java[open]:83) - Using Scala Version: 2.11
+ERROR [2020-10-23 22:42:37,362] ({pool-2-thread-7} NewSparkInterpreter.java[open]:127) - Fail to open SparkInterpreter
+ERROR [2020-10-23 22:42:37,363] ({pool-2-thread-7} Job.java[run]:190) - Job failed
+org.apache.zeppelin.interpreter.InterpreterException: Fail to open SparkInterpreter
+	at org.apache.zeppelin.spark.NewSparkInterpreter.open(NewSparkInterpreter.java:128)
+	at org.apache.zeppelin.spark.SparkInterpreter.open(SparkInterpreter.java:62)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.interpreter.remote.RemoteInterpreterServer$InterpretJob.jobRun(RemoteInterpreterServer.java:616)
+	at org.apache.zeppelin.scheduler.Job.run(Job.java:188)
+	at org.apache.zeppelin.scheduler.FIFOScheduler$1.run(FIFOScheduler.java:140)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: scala.reflect.internal.MissingRequirementError: object java.lang.Object in compiler mirror not found.
+	at scala.reflect.internal.MissingRequirementError$.signal(MissingRequirementError.scala:17)
+	at scala.reflect.internal.MissingRequirementError$.notFound(MissingRequirementError.scala:18)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:53)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:45)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:45)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:66)
+	at scala.reflect.internal.Mirrors$RootsBase.getClassByName(Mirrors.scala:102)
+	at scala.reflect.internal.Mirrors$RootsBase.getRequiredClass(Mirrors.scala:105)
+	at scala.reflect.internal.Definitions$DefinitionsClass.ObjectClass$lzycompute(Definitions.scala:257)
+	at scala.reflect.internal.Definitions$DefinitionsClass.ObjectClass(Definitions.scala:257)
+	at scala.reflect.internal.Definitions$DefinitionsClass.init(Definitions.scala:1394)
+	at scala.tools.nsc.Global$Run.<init>(Global.scala:1215)
+	at scala.tools.nsc.interpreter.IMain.compileSourcesKeepingRun(IMain.scala:432)
+	at scala.tools.nsc.interpreter.IMain$ReadEvalPrint.compileAndSaveRun(IMain.scala:855)
+	at scala.tools.nsc.interpreter.IMain$ReadEvalPrint.compile(IMain.scala:813)
+	at scala.tools.nsc.interpreter.IMain.bind(IMain.scala:675)
+	at scala.tools.nsc.interpreter.IMain.bind(IMain.scala:712)
+	at scala.tools.nsc.interpreter.IMain$$anonfun$quietBind$1.apply(IMain.scala:711)
+	at scala.tools.nsc.interpreter.IMain$$anonfun$quietBind$1.apply(IMain.scala:711)
+	at scala.tools.nsc.interpreter.IMain.beQuietDuring(IMain.scala:214)
+	at scala.tools.nsc.interpreter.IMain.quietBind(IMain.scala:711)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter$.loopPostInit$1(SparkScala211Interpreter.scala:142)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter$.org$apache$zeppelin$spark$SparkScala211Interpreter$$loopPostInit(SparkScala211Interpreter.scala:177)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter.open(SparkScala211Interpreter.scala:87)
+	at org.apache.zeppelin.spark.NewSparkInterpreter.open(NewSparkInterpreter.java:102)
+	... 11 more
+ INFO [2020-10-23 22:42:37,364] ({pool-2-thread-7} SchedulerFactory.java[jobFinished]:120) - Job 20201023-001936_119304475 finished by scheduler interpreter_1296324519
+ INFO [2020-10-23 22:43:11,353] ({pool-2-thread-6} SchedulerFactory.java[jobStarted]:114) - Job 20201023-001936_119304475 started by scheduler interpreter_2072180324
+ INFO [2020-10-23 22:43:11,768] ({pool-2-thread-6} PySparkInterpreter.java[open]:140) - IPython is not available, use the native PySparkInterpreter
+
+ INFO [2020-10-23 22:43:11,771] ({pool-2-thread-6} PySparkInterpreter.java[createPythonScript]:118) - File /tmp/zeppelin_pyspark-9713858992462794222.py created
+ INFO [2020-10-23 22:43:11,772] ({pool-2-thread-6} NewSparkInterpreter.java[open]:83) - Using Scala Version: 2.11
+ERROR [2020-10-23 22:43:11,964] ({pool-2-thread-6} NewSparkInterpreter.java[open]:127) - Fail to open SparkInterpreter
+ERROR [2020-10-23 22:43:11,964] ({pool-2-thread-6} PySparkInterpreter.java[open]:196) - Error
+org.apache.zeppelin.interpreter.InterpreterException: Fail to open SparkInterpreter
+	at org.apache.zeppelin.spark.NewSparkInterpreter.open(NewSparkInterpreter.java:128)
+	at org.apache.zeppelin.spark.SparkInterpreter.open(SparkInterpreter.java:62)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.spark.PySparkInterpreter.getSparkInterpreter(PySparkInterpreter.java:664)
+	at org.apache.zeppelin.spark.PySparkInterpreter.createGatewayServerAndStartScript(PySparkInterpreter.java:260)
+	at org.apache.zeppelin.spark.PySparkInterpreter.open(PySparkInterpreter.java:194)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.interpreter.remote.RemoteInterpreterServer$InterpretJob.jobRun(RemoteInterpreterServer.java:616)
+	at org.apache.zeppelin.scheduler.Job.run(Job.java:188)
+	at org.apache.zeppelin.scheduler.FIFOScheduler$1.run(FIFOScheduler.java:140)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: scala.reflect.internal.MissingRequirementError: object java.lang.Object in compiler mirror not found.
+	at scala.reflect.internal.MissingRequirementError$.signal(MissingRequirementError.scala:17)
+	at scala.reflect.internal.MissingRequirementError$.notFound(MissingRequirementError.scala:18)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:53)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:45)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:45)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:66)
+	at scala.reflect.internal.Mirrors$RootsBase.getClassByName(Mirrors.scala:102)
+	at scala.reflect.internal.Mirrors$RootsBase.getRequiredClass(Mirrors.scala:105)
+	at scala.reflect.internal.Definitions$DefinitionsClass.ObjectClass$lzycompute(Definitions.scala:257)
+	at scala.reflect.internal.Definitions$DefinitionsClass.ObjectClass(Definitions.scala:257)
+	at scala.reflect.internal.Definitions$DefinitionsClass.init(Definitions.scala:1394)
+	at scala.tools.nsc.Global$Run.<init>(Global.scala:1215)
+	at scala.tools.nsc.interpreter.IMain.compileSourcesKeepingRun(IMain.scala:432)
+	at scala.tools.nsc.interpreter.IMain$ReadEvalPrint.compileAndSaveRun(IMain.scala:855)
+	at scala.tools.nsc.interpreter.IMain$ReadEvalPrint.compile(IMain.scala:813)
+	at scala.tools.nsc.interpreter.IMain.bind(IMain.scala:675)
+	at scala.tools.nsc.interpreter.IMain.bind(IMain.scala:712)
+	at scala.tools.nsc.interpreter.IMain$$anonfun$quietBind$1.apply(IMain.scala:711)
+	at scala.tools.nsc.interpreter.IMain$$anonfun$quietBind$1.apply(IMain.scala:711)
+	at scala.tools.nsc.interpreter.IMain.beQuietDuring(IMain.scala:214)
+	at scala.tools.nsc.interpreter.IMain.quietBind(IMain.scala:711)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter$.loopPostInit$1(SparkScala211Interpreter.scala:142)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter$.org$apache$zeppelin$spark$SparkScala211Interpreter$$loopPostInit(SparkScala211Interpreter.scala:177)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter.open(SparkScala211Interpreter.scala:87)
+	at org.apache.zeppelin.spark.NewSparkInterpreter.open(NewSparkInterpreter.java:102)
+	... 15 more
+ERROR [2020-10-23 22:43:11,965] ({pool-2-thread-6} Job.java[run]:190) - Job failed
+org.apache.zeppelin.interpreter.InterpreterException: org.apache.zeppelin.interpreter.InterpreterException: Fail to open SparkInterpreter
+	at org.apache.zeppelin.spark.PySparkInterpreter.open(PySparkInterpreter.java:197)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.interpreter.remote.RemoteInterpreterServer$InterpretJob.jobRun(RemoteInterpreterServer.java:616)
+	at org.apache.zeppelin.scheduler.Job.run(Job.java:188)
+	at org.apache.zeppelin.scheduler.FIFOScheduler$1.run(FIFOScheduler.java:140)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.apache.zeppelin.interpreter.InterpreterException: Fail to open SparkInterpreter
+	at org.apache.zeppelin.spark.NewSparkInterpreter.open(NewSparkInterpreter.java:128)
+	at org.apache.zeppelin.spark.SparkInterpreter.open(SparkInterpreter.java:62)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.spark.PySparkInterpreter.getSparkInterpreter(PySparkInterpreter.java:664)
+	at org.apache.zeppelin.spark.PySparkInterpreter.createGatewayServerAndStartScript(PySparkInterpreter.java:260)
+	at org.apache.zeppelin.spark.PySparkInterpreter.open(PySparkInterpreter.java:194)
+	... 10 more
+Caused by: scala.reflect.internal.MissingRequirementError: object java.lang.Object in compiler mirror not found.
+	at scala.reflect.internal.MissingRequirementError$.signal(MissingRequirementError.scala:17)
+	at scala.reflect.internal.MissingRequirementError$.notFound(MissingRequirementError.scala:18)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:53)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:45)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:45)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:66)
+	at scala.reflect.internal.Mirrors$RootsBase.getClassByName(Mirrors.scala:102)
+	at scala.reflect.internal.Mirrors$RootsBase.getRequiredClass(Mirrors.scala:105)
+	at scala.reflect.internal.Definitions$DefinitionsClass.ObjectClass$lzycompute(Definitions.scala:257)
+	at scala.reflect.internal.Definitions$DefinitionsClass.ObjectClass(Definitions.scala:257)
+	at scala.reflect.internal.Definitions$DefinitionsClass.init(Definitions.scala:1394)
+	at scala.tools.nsc.Global$Run.<init>(Global.scala:1215)
+	at scala.tools.nsc.interpreter.IMain.compileSourcesKeepingRun(IMain.scala:432)
+	at scala.tools.nsc.interpreter.IMain$ReadEvalPrint.compileAndSaveRun(IMain.scala:855)
+	at scala.tools.nsc.interpreter.IMain$ReadEvalPrint.compile(IMain.scala:813)
+	at scala.tools.nsc.interpreter.IMain.bind(IMain.scala:675)
+	at scala.tools.nsc.interpreter.IMain.bind(IMain.scala:712)
+	at scala.tools.nsc.interpreter.IMain$$anonfun$quietBind$1.apply(IMain.scala:711)
+	at scala.tools.nsc.interpreter.IMain$$anonfun$quietBind$1.apply(IMain.scala:711)
+	at scala.tools.nsc.interpreter.IMain.beQuietDuring(IMain.scala:214)
+	at scala.tools.nsc.interpreter.IMain.quietBind(IMain.scala:711)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter$.loopPostInit$1(SparkScala211Interpreter.scala:142)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter$.org$apache$zeppelin$spark$SparkScala211Interpreter$$loopPostInit(SparkScala211Interpreter.scala:177)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter.open(SparkScala211Interpreter.scala:87)
+	at org.apache.zeppelin.spark.NewSparkInterpreter.open(NewSparkInterpreter.java:102)
+	... 15 more
+ INFO [2020-10-23 22:43:11,966] ({pool-2-thread-6} SchedulerFactory.java[jobFinished]:120) - Job 20201023-001936_119304475 finished by scheduler interpreter_2072180324
+ INFO [2020-10-23 22:44:13,364] ({pool-1-thread-3} RemoteInterpreterServer.java[shutdown]:209) - Shutting down...
+ INFO [2020-10-23 22:44:26,803] ({main} RemoteInterpreterServer.java[main]:261) - URL:jar:file:/users/ssulca/diplodatos_bigdata/spark/zeppelin-0.8.2-bin-all/interpreter/spark/spark-interpreter-0.8.2.jar!/org/apache/zeppelin/interpreter/remote/RemoteInterpreterServer.class
+ INFO [2020-10-23 22:44:26,865] ({main} RemoteInterpreterServer.java[<init>]:162) - Launching ThriftServer at 200.16.29.165:41451
+ INFO [2020-10-23 22:44:26,870] ({main} RemoteInterpreterServer.java[<init>]:166) - Starting remote interpreter server on port 41451
+ INFO [2020-10-23 22:44:26,873] ({Thread-0} RemoteInterpreterServer.java[run]:203) - Starting remote interpreter server on port 41451
+ INFO [2020-10-23 22:44:27,883] ({Thread-1} RemoteInterpreterUtils.java[registerInterpreter]:165) - callbackHost: 200.16.29.165, callbackPort: 39041, callbackInfo: CallbackInfo(host:200.16.29.165, port:41451)
+ INFO [2020-10-23 22:44:28,065] ({pool-1-thread-1} RemoteInterpreterServer.java[createInterpreter]:311) - Instantiate interpreter org.apache.zeppelin.spark.SparkInterpreter
+ INFO [2020-10-23 22:44:28,069] ({pool-1-thread-1} RemoteInterpreterServer.java[createInterpreter]:311) - Instantiate interpreter org.apache.zeppelin.spark.SparkSqlInterpreter
+ INFO [2020-10-23 22:44:28,079] ({pool-1-thread-1} RemoteInterpreterServer.java[createInterpreter]:311) - Instantiate interpreter org.apache.zeppelin.spark.DepInterpreter
+ INFO [2020-10-23 22:44:28,093] ({pool-1-thread-1} RemoteInterpreterServer.java[createInterpreter]:311) - Instantiate interpreter org.apache.zeppelin.spark.PySparkInterpreter
+ INFO [2020-10-23 22:44:28,098] ({pool-1-thread-1} RemoteInterpreterServer.java[createInterpreter]:311) - Instantiate interpreter org.apache.zeppelin.spark.IPySparkInterpreter
+ INFO [2020-10-23 22:44:28,101] ({pool-1-thread-1} RemoteInterpreterServer.java[createInterpreter]:311) - Instantiate interpreter org.apache.zeppelin.spark.SparkRInterpreter
+ INFO [2020-10-23 22:44:28,170] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:121) - Load configuration from file:/users/ssulca/diplodatos_bigdata/spark/zeppelin-0.8.2-bin-all/zeppelin-site.xml
+ WARN [2020-10-23 22:44:28,285] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:124) - Failed to load configuration from file:/users/ssulca/diplodatos_bigdata/spark/zeppelin-0.8.2-bin-all/zeppelin-site.xml proceeding with a default
+org.apache.commons.configuration.ConfigurationException: Error parsing file:/users/ssulca/diplodatos_bigdata/spark/zeppelin-0.8.2-bin-all/zeppelin-site.xml
+	at org.apache.commons.configuration.XMLConfiguration.load(XMLConfiguration.java:950)
+	at org.apache.commons.configuration.XMLConfiguration.load(XMLConfiguration.java:908)
+	at org.apache.commons.configuration.XMLConfiguration$XMLFileConfigurationDelegate.load(XMLConfiguration.java:1583)
+	at org.apache.commons.configuration.AbstractFileConfiguration.load(AbstractFileConfiguration.java:324)
+	at org.apache.commons.configuration.AbstractHierarchicalFileConfiguration.load(AbstractHierarchicalFileConfiguration.java:199)
+	at org.apache.zeppelin.conf.ZeppelinConfiguration.<init>(ZeppelinConfiguration.java:52)
+	at org.apache.zeppelin.conf.ZeppelinConfiguration.create(ZeppelinConfiguration.java:122)
+	at org.apache.zeppelin.scheduler.SchedulerFactory.<init>(SchedulerFactory.java:56)
+	at org.apache.zeppelin.scheduler.SchedulerFactory.singleton(SchedulerFactory.java:45)
+	at org.apache.zeppelin.interpreter.Interpreter.getScheduler(Interpreter.java:177)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.getScheduler(LazyOpenInterpreter.java:131)
+	at org.apache.zeppelin.interpreter.remote.RemoteInterpreterServer.interpret(RemoteInterpreterServer.java:431)
+	at org.apache.zeppelin.interpreter.thrift.RemoteInterpreterService$Processor$interpret.getResult(RemoteInterpreterService.java:1859)
+	at org.apache.zeppelin.interpreter.thrift.RemoteInterpreterService$Processor$interpret.getResult(RemoteInterpreterService.java:1844)
+	at org.apache.thrift.ProcessFunction.process(ProcessFunction.java:39)
+	at org.apache.thrift.TBaseProcessor.process(TBaseProcessor.java:39)
+	at org.apache.thrift.server.TThreadPoolServer$WorkerProcess.run(TThreadPoolServer.java:285)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.xml.sax.SAXParseException; Premature end of file.
+	at org.apache.xerces.parsers.DOMParser.parse(Unknown Source)
+	at org.apache.xerces.jaxp.DocumentBuilderImpl.parse(Unknown Source)
+	at org.apache.commons.configuration.XMLConfiguration.load(XMLConfiguration.java:942)
+	... 19 more
+ INFO [2020-10-23 22:44:28,306] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:129) - Server Host: 127.0.0.1
+ INFO [2020-10-23 22:44:28,306] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:131) - Server Port: 8080
+ INFO [2020-10-23 22:44:28,307] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:135) - Context Path: /
+ INFO [2020-10-23 22:44:28,310] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:136) - Zeppelin Version: 0.8.2
+ INFO [2020-10-23 22:44:28,310] ({pool-1-thread-1} SchedulerFactory.java[<init>]:59) - Scheduler Thread Pool Size: 100
+ INFO [2020-10-23 22:44:28,316] ({pool-2-thread-2} SchedulerFactory.java[jobStarted]:114) - Job 20201023-001936_119304475 started by scheduler interpreter_1015986845
+ INFO [2020-10-23 22:44:28,744] ({pool-2-thread-2} PySparkInterpreter.java[open]:140) - IPython is not available, use the native PySparkInterpreter
+
+ INFO [2020-10-23 22:44:28,754] ({pool-2-thread-2} PySparkInterpreter.java[createPythonScript]:118) - File /tmp/zeppelin_pyspark-10271804500927878818.py created
+ INFO [2020-10-23 22:44:28,801] ({pool-2-thread-2} NewSparkInterpreter.java[open]:83) - Using Scala Version: 2.11
+ERROR [2020-10-23 22:44:30,513] ({pool-2-thread-2} NewSparkInterpreter.java[open]:127) - Fail to open SparkInterpreter
+ERROR [2020-10-23 22:44:30,513] ({pool-2-thread-2} PySparkInterpreter.java[open]:196) - Error
+org.apache.zeppelin.interpreter.InterpreterException: Fail to open SparkInterpreter
+	at org.apache.zeppelin.spark.NewSparkInterpreter.open(NewSparkInterpreter.java:128)
+	at org.apache.zeppelin.spark.SparkInterpreter.open(SparkInterpreter.java:62)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.spark.PySparkInterpreter.getSparkInterpreter(PySparkInterpreter.java:664)
+	at org.apache.zeppelin.spark.PySparkInterpreter.createGatewayServerAndStartScript(PySparkInterpreter.java:260)
+	at org.apache.zeppelin.spark.PySparkInterpreter.open(PySparkInterpreter.java:194)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.interpreter.remote.RemoteInterpreterServer$InterpretJob.jobRun(RemoteInterpreterServer.java:616)
+	at org.apache.zeppelin.scheduler.Job.run(Job.java:188)
+	at org.apache.zeppelin.scheduler.FIFOScheduler$1.run(FIFOScheduler.java:140)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: scala.reflect.internal.MissingRequirementError: object java.lang.Object in compiler mirror not found.
+	at scala.reflect.internal.MissingRequirementError$.signal(MissingRequirementError.scala:17)
+	at scala.reflect.internal.MissingRequirementError$.notFound(MissingRequirementError.scala:18)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:53)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:45)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:45)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:66)
+	at scala.reflect.internal.Mirrors$RootsBase.getClassByName(Mirrors.scala:102)
+	at scala.reflect.internal.Mirrors$RootsBase.getRequiredClass(Mirrors.scala:105)
+	at scala.reflect.internal.Definitions$DefinitionsClass.ObjectClass$lzycompute(Definitions.scala:257)
+	at scala.reflect.internal.Definitions$DefinitionsClass.ObjectClass(Definitions.scala:257)
+	at scala.reflect.internal.Definitions$DefinitionsClass.init(Definitions.scala:1394)
+	at scala.tools.nsc.Global$Run.<init>(Global.scala:1215)
+	at scala.tools.nsc.interpreter.IMain.compileSourcesKeepingRun(IMain.scala:432)
+	at scala.tools.nsc.interpreter.IMain$ReadEvalPrint.compileAndSaveRun(IMain.scala:855)
+	at scala.tools.nsc.interpreter.IMain$ReadEvalPrint.compile(IMain.scala:813)
+	at scala.tools.nsc.interpreter.IMain.bind(IMain.scala:675)
+	at scala.tools.nsc.interpreter.IMain.bind(IMain.scala:712)
+	at scala.tools.nsc.interpreter.IMain$$anonfun$quietBind$1.apply(IMain.scala:711)
+	at scala.tools.nsc.interpreter.IMain$$anonfun$quietBind$1.apply(IMain.scala:711)
+	at scala.tools.nsc.interpreter.IMain.beQuietDuring(IMain.scala:214)
+	at scala.tools.nsc.interpreter.IMain.quietBind(IMain.scala:711)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter$.loopPostInit$1(SparkScala211Interpreter.scala:142)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter$.org$apache$zeppelin$spark$SparkScala211Interpreter$$loopPostInit(SparkScala211Interpreter.scala:177)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter.open(SparkScala211Interpreter.scala:87)
+	at org.apache.zeppelin.spark.NewSparkInterpreter.open(NewSparkInterpreter.java:102)
+	... 15 more
+ERROR [2020-10-23 22:44:30,514] ({pool-2-thread-2} Job.java[run]:190) - Job failed
+org.apache.zeppelin.interpreter.InterpreterException: org.apache.zeppelin.interpreter.InterpreterException: Fail to open SparkInterpreter
+	at org.apache.zeppelin.spark.PySparkInterpreter.open(PySparkInterpreter.java:197)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.interpreter.remote.RemoteInterpreterServer$InterpretJob.jobRun(RemoteInterpreterServer.java:616)
+	at org.apache.zeppelin.scheduler.Job.run(Job.java:188)
+	at org.apache.zeppelin.scheduler.FIFOScheduler$1.run(FIFOScheduler.java:140)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.apache.zeppelin.interpreter.InterpreterException: Fail to open SparkInterpreter
+	at org.apache.zeppelin.spark.NewSparkInterpreter.open(NewSparkInterpreter.java:128)
+	at org.apache.zeppelin.spark.SparkInterpreter.open(SparkInterpreter.java:62)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.spark.PySparkInterpreter.getSparkInterpreter(PySparkInterpreter.java:664)
+	at org.apache.zeppelin.spark.PySparkInterpreter.createGatewayServerAndStartScript(PySparkInterpreter.java:260)
+	at org.apache.zeppelin.spark.PySparkInterpreter.open(PySparkInterpreter.java:194)
+	... 10 more
+Caused by: scala.reflect.internal.MissingRequirementError: object java.lang.Object in compiler mirror not found.
+	at scala.reflect.internal.MissingRequirementError$.signal(MissingRequirementError.scala:17)
+	at scala.reflect.internal.MissingRequirementError$.notFound(MissingRequirementError.scala:18)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:53)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:45)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:45)
+	at scala.reflect.internal.Mirrors$RootsBase.getModuleOrClass(Mirrors.scala:66)
+	at scala.reflect.internal.Mirrors$RootsBase.getClassByName(Mirrors.scala:102)
+	at scala.reflect.internal.Mirrors$RootsBase.getRequiredClass(Mirrors.scala:105)
+	at scala.reflect.internal.Definitions$DefinitionsClass.ObjectClass$lzycompute(Definitions.scala:257)
+	at scala.reflect.internal.Definitions$DefinitionsClass.ObjectClass(Definitions.scala:257)
+	at scala.reflect.internal.Definitions$DefinitionsClass.init(Definitions.scala:1394)
+	at scala.tools.nsc.Global$Run.<init>(Global.scala:1215)
+	at scala.tools.nsc.interpreter.IMain.compileSourcesKeepingRun(IMain.scala:432)
+	at scala.tools.nsc.interpreter.IMain$ReadEvalPrint.compileAndSaveRun(IMain.scala:855)
+	at scala.tools.nsc.interpreter.IMain$ReadEvalPrint.compile(IMain.scala:813)
+	at scala.tools.nsc.interpreter.IMain.bind(IMain.scala:675)
+	at scala.tools.nsc.interpreter.IMain.bind(IMain.scala:712)
+	at scala.tools.nsc.interpreter.IMain$$anonfun$quietBind$1.apply(IMain.scala:711)
+	at scala.tools.nsc.interpreter.IMain$$anonfun$quietBind$1.apply(IMain.scala:711)
+	at scala.tools.nsc.interpreter.IMain.beQuietDuring(IMain.scala:214)
+	at scala.tools.nsc.interpreter.IMain.quietBind(IMain.scala:711)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter$.loopPostInit$1(SparkScala211Interpreter.scala:142)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter$.org$apache$zeppelin$spark$SparkScala211Interpreter$$loopPostInit(SparkScala211Interpreter.scala:177)
+	at org.apache.zeppelin.spark.SparkScala211Interpreter.open(SparkScala211Interpreter.scala:87)
+	at org.apache.zeppelin.spark.NewSparkInterpreter.open(NewSparkInterpreter.java:102)
+	... 15 more
+ INFO [2020-10-23 22:44:30,524] ({pool-2-thread-2} SchedulerFactory.java[jobFinished]:120) - Job 20201023-001936_119304475 finished by scheduler interpreter_1015986845
+ INFO [2020-10-23 22:49:49,611] ({main} RemoteInterpreterServer.java[main]:261) - URL:jar:file:/users/ssulca/diplodatos_bigdata/spark/zeppelin-0.8.2-bin-all/interpreter/spark/spark-interpreter-0.8.2.jar!/org/apache/zeppelin/interpreter/remote/RemoteInterpreterServer.class
+ INFO [2020-10-23 22:49:49,672] ({main} RemoteInterpreterServer.java[<init>]:162) - Launching ThriftServer at 200.16.29.165:35641
+ INFO [2020-10-23 22:49:49,680] ({main} RemoteInterpreterServer.java[<init>]:166) - Starting remote interpreter server on port 35641
+ INFO [2020-10-23 22:49:49,682] ({Thread-0} RemoteInterpreterServer.java[run]:203) - Starting remote interpreter server on port 35641
+ INFO [2020-10-23 22:49:50,692] ({Thread-1} RemoteInterpreterUtils.java[registerInterpreter]:165) - callbackHost: 200.16.29.165, callbackPort: 34657, callbackInfo: CallbackInfo(host:200.16.29.165, port:35641)
+ INFO [2020-10-23 22:49:50,921] ({pool-1-thread-1} RemoteInterpreterServer.java[createInterpreter]:311) - Instantiate interpreter org.apache.zeppelin.spark.SparkInterpreter
+ INFO [2020-10-23 22:49:50,925] ({pool-1-thread-1} RemoteInterpreterServer.java[createInterpreter]:311) - Instantiate interpreter org.apache.zeppelin.spark.SparkSqlInterpreter
+ INFO [2020-10-23 22:49:50,934] ({pool-1-thread-1} RemoteInterpreterServer.java[createInterpreter]:311) - Instantiate interpreter org.apache.zeppelin.spark.DepInterpreter
+ INFO [2020-10-23 22:49:50,949] ({pool-1-thread-1} RemoteInterpreterServer.java[createInterpreter]:311) - Instantiate interpreter org.apache.zeppelin.spark.PySparkInterpreter
+ INFO [2020-10-23 22:49:50,955] ({pool-1-thread-1} RemoteInterpreterServer.java[createInterpreter]:311) - Instantiate interpreter org.apache.zeppelin.spark.IPySparkInterpreter
+ INFO [2020-10-23 22:49:50,957] ({pool-1-thread-1} RemoteInterpreterServer.java[createInterpreter]:311) - Instantiate interpreter org.apache.zeppelin.spark.SparkRInterpreter
+ INFO [2020-10-23 22:49:51,053] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:121) - Load configuration from file:/users/ssulca/diplodatos_bigdata/spark/zeppelin-0.8.2-bin-all/zeppelin-site.xml
+ WARN [2020-10-23 22:49:51,143] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:124) - Failed to load configuration from file:/users/ssulca/diplodatos_bigdata/spark/zeppelin-0.8.2-bin-all/zeppelin-site.xml proceeding with a default
+org.apache.commons.configuration.ConfigurationException: Error parsing file:/users/ssulca/diplodatos_bigdata/spark/zeppelin-0.8.2-bin-all/zeppelin-site.xml
+	at org.apache.commons.configuration.XMLConfiguration.load(XMLConfiguration.java:950)
+	at org.apache.commons.configuration.XMLConfiguration.load(XMLConfiguration.java:908)
+	at org.apache.commons.configuration.XMLConfiguration$XMLFileConfigurationDelegate.load(XMLConfiguration.java:1583)
+	at org.apache.commons.configuration.AbstractFileConfiguration.load(AbstractFileConfiguration.java:324)
+	at org.apache.commons.configuration.AbstractHierarchicalFileConfiguration.load(AbstractHierarchicalFileConfiguration.java:199)
+	at org.apache.zeppelin.conf.ZeppelinConfiguration.<init>(ZeppelinConfiguration.java:52)
+	at org.apache.zeppelin.conf.ZeppelinConfiguration.create(ZeppelinConfiguration.java:122)
+	at org.apache.zeppelin.scheduler.SchedulerFactory.<init>(SchedulerFactory.java:56)
+	at org.apache.zeppelin.scheduler.SchedulerFactory.singleton(SchedulerFactory.java:45)
+	at org.apache.zeppelin.interpreter.Interpreter.getScheduler(Interpreter.java:177)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.getScheduler(LazyOpenInterpreter.java:131)
+	at org.apache.zeppelin.interpreter.remote.RemoteInterpreterServer.interpret(RemoteInterpreterServer.java:431)
+	at org.apache.zeppelin.interpreter.thrift.RemoteInterpreterService$Processor$interpret.getResult(RemoteInterpreterService.java:1859)
+	at org.apache.zeppelin.interpreter.thrift.RemoteInterpreterService$Processor$interpret.getResult(RemoteInterpreterService.java:1844)
+	at org.apache.thrift.ProcessFunction.process(ProcessFunction.java:39)
+	at org.apache.thrift.TBaseProcessor.process(TBaseProcessor.java:39)
+	at org.apache.thrift.server.TThreadPoolServer$WorkerProcess.run(TThreadPoolServer.java:285)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.xml.sax.SAXParseException; Premature end of file.
+	at org.apache.xerces.parsers.DOMParser.parse(Unknown Source)
+	at org.apache.xerces.jaxp.DocumentBuilderImpl.parse(Unknown Source)
+	at org.apache.commons.configuration.XMLConfiguration.load(XMLConfiguration.java:942)
+	... 19 more
+ INFO [2020-10-23 22:49:51,165] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:129) - Server Host: 127.0.0.1
+ INFO [2020-10-23 22:49:51,165] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:131) - Server Port: 8080
+ INFO [2020-10-23 22:49:51,166] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:135) - Context Path: /
+ INFO [2020-10-23 22:49:51,169] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:136) - Zeppelin Version: 0.8.2
+ INFO [2020-10-23 22:49:51,169] ({pool-1-thread-1} SchedulerFactory.java[<init>]:59) - Scheduler Thread Pool Size: 100
+ INFO [2020-10-23 22:49:51,174] ({pool-2-thread-2} SchedulerFactory.java[jobStarted]:114) - Job 20201023-001936_119304475 started by scheduler interpreter_1406437594
+ INFO [2020-10-23 22:49:51,659] ({pool-2-thread-2} PySparkInterpreter.java[open]:140) - IPython is not available, use the native PySparkInterpreter
+
+ INFO [2020-10-23 22:49:51,665] ({pool-2-thread-2} PySparkInterpreter.java[createPythonScript]:118) - File /tmp/zeppelin_pyspark-2766989756824337439.py created
+ INFO [2020-10-23 22:49:51,717] ({pool-2-thread-2} NewSparkInterpreter.java[open]:83) - Using Scala Version: 2.11
+ INFO [2020-10-23 22:49:55,951] ({pool-2-thread-2} Logging.scala[logInfo]:54) - Running Spark version 2.2.1
+ WARN [2020-10-23 22:49:56,136] ({pool-2-thread-2} NativeCodeLoader.java[<clinit>]:62) - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+ INFO [2020-10-23 22:49:56,252] ({pool-2-thread-2} Logging.scala[logInfo]:54) - Submitted application: Zeppelin
+ INFO [2020-10-23 22:49:56,272] ({pool-2-thread-2} Logging.scala[logInfo]:54) - Changing view acls to: ssulca
+ INFO [2020-10-23 22:49:56,272] ({pool-2-thread-2} Logging.scala[logInfo]:54) - Changing modify acls to: ssulca
+ INFO [2020-10-23 22:49:56,272] ({pool-2-thread-2} Logging.scala[logInfo]:54) - Changing view acls groups to: 
+ INFO [2020-10-23 22:49:56,273] ({pool-2-thread-2} Logging.scala[logInfo]:54) - Changing modify acls groups to: 
+ INFO [2020-10-23 22:49:56,273] ({pool-2-thread-2} Logging.scala[logInfo]:54) - SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(ssulca); groups with view permissions: Set(); users  with modify permissions: Set(ssulca); groups with modify permissions: Set()
+ INFO [2020-10-23 22:49:56,557] ({pool-2-thread-2} Logging.scala[logInfo]:54) - Successfully started service 'sparkDriver' on port 34275.
+ INFO [2020-10-23 22:49:56,577] ({pool-2-thread-2} Logging.scala[logInfo]:54) - Registering MapOutputTracker
+ INFO [2020-10-23 22:49:56,600] ({pool-2-thread-2} Logging.scala[logInfo]:54) - Registering BlockManagerMaster
+ INFO [2020-10-23 22:49:56,603] ({pool-2-thread-2} Logging.scala[logInfo]:54) - Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+ INFO [2020-10-23 22:49:56,603] ({pool-2-thread-2} Logging.scala[logInfo]:54) - BlockManagerMasterEndpoint up
+ INFO [2020-10-23 22:49:56,613] ({pool-2-thread-2} Logging.scala[logInfo]:54) - Created local directory at /tmp/blockmgr-fac9bf46-c754-4e7d-aa22-a2fed2cf954f
+ INFO [2020-10-23 22:49:56,629] ({pool-2-thread-2} Logging.scala[logInfo]:54) - MemoryStore started with capacity 1458.6 MB
+ INFO [2020-10-23 22:49:56,668] ({pool-2-thread-2} Logging.scala[logInfo]:54) - Registering OutputCommitCoordinator
+ INFO [2020-10-23 22:49:56,749] ({pool-2-thread-2} Log.java[initialized]:192) - Logging initialized @7432ms
+ INFO [2020-10-23 22:49:56,811] ({pool-2-thread-2} Server.java[doStart]:345) - jetty-9.3.z-SNAPSHOT
+ INFO [2020-10-23 22:49:56,826] ({pool-2-thread-2} Server.java[doStart]:403) - Started @7509ms
+ WARN [2020-10-23 22:49:56,848] ({pool-2-thread-2} Logging.scala[logWarning]:66) - Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
+ INFO [2020-10-23 22:49:56,854] ({pool-2-thread-2} AbstractConnector.java[doStart]:270) - Started ServerConnector@4bcf1c04{HTTP/1.1,[http/1.1]}{0.0.0.0:4041}
+ INFO [2020-10-23 22:49:56,854] ({pool-2-thread-2} Logging.scala[logInfo]:54) - Successfully started service 'SparkUI' on port 4041.
+ INFO [2020-10-23 22:49:56,886] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@e120f39{/jobs,null,AVAILABLE,@Spark}
+ INFO [2020-10-23 22:49:56,887] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@38dd581d{/jobs/json,null,AVAILABLE,@Spark}
+ INFO [2020-10-23 22:49:56,888] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@38bcfdaf{/jobs/job,null,AVAILABLE,@Spark}
+ INFO [2020-10-23 22:49:56,889] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@3f958b52{/jobs/job/json,null,AVAILABLE,@Spark}
+ INFO [2020-10-23 22:49:56,889] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@5393961f{/stages,null,AVAILABLE,@Spark}
+ INFO [2020-10-23 22:49:56,890] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@5cddc1ee{/stages/json,null,AVAILABLE,@Spark}
+ INFO [2020-10-23 22:49:56,891] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@29545c41{/stages/stage,null,AVAILABLE,@Spark}
+ INFO [2020-10-23 22:49:56,892] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@715cf490{/stages/stage/json,null,AVAILABLE,@Spark}
+ INFO [2020-10-23 22:49:56,893] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@40799b3a{/stages/pool,null,AVAILABLE,@Spark}
+ INFO [2020-10-23 22:49:56,893] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@24ca670d{/stages/pool/json,null,AVAILABLE,@Spark}
+ INFO [2020-10-23 22:49:56,894] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@279741a{/storage,null,AVAILABLE,@Spark}
+ INFO [2020-10-23 22:49:56,895] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@60a0471b{/storage/json,null,AVAILABLE,@Spark}
+ INFO [2020-10-23 22:49:56,895] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@b321852{/storage/rdd,null,AVAILABLE,@Spark}
+ INFO [2020-10-23 22:49:56,896] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@5310aaa0{/storage/rdd/json,null,AVAILABLE,@Spark}
+ INFO [2020-10-23 22:49:56,897] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@19e5badc{/environment,null,AVAILABLE,@Spark}
+ INFO [2020-10-23 22:49:56,897] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@2b2008a6{/environment/json,null,AVAILABLE,@Spark}
+ INFO [2020-10-23 22:49:56,898] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@6b4f8910{/executors,null,AVAILABLE,@Spark}
+ INFO [2020-10-23 22:49:56,899] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@221083fe{/executors/json,null,AVAILABLE,@Spark}
+ INFO [2020-10-23 22:49:56,900] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@2d0b8e8a{/executors/threadDump,null,AVAILABLE,@Spark}
+ INFO [2020-10-23 22:49:56,901] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@74f9ce20{/executors/threadDump/json,null,AVAILABLE,@Spark}
+ INFO [2020-10-23 22:49:56,907] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@6334517b{/static,null,AVAILABLE,@Spark}
+ INFO [2020-10-23 22:49:56,914] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@2af6a4b8{/,null,AVAILABLE,@Spark}
+ INFO [2020-10-23 22:49:56,916] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@543bf7c2{/api,null,AVAILABLE,@Spark}
+ INFO [2020-10-23 22:49:56,916] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@373e362{/jobs/job/kill,null,AVAILABLE,@Spark}
+ INFO [2020-10-23 22:49:56,917] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@7be622a5{/stages/stage/kill,null,AVAILABLE,@Spark}
+ INFO [2020-10-23 22:49:56,919] ({pool-2-thread-2} Logging.scala[logInfo]:54) - Bound SparkUI to 0.0.0.0, and started at http://200.16.29.165:4041
+ INFO [2020-10-23 22:49:56,987] ({pool-2-thread-2} Logging.scala[logInfo]:54) - Starting executor ID driver on host localhost
+ INFO [2020-10-23 22:49:56,993] ({pool-2-thread-2} Logging.scala[logInfo]:54) - Using REPL class URI: spark://200.16.29.165:34275/classes
+ INFO [2020-10-23 22:49:57,012] ({pool-2-thread-2} Logging.scala[logInfo]:54) - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 43023.
+ INFO [2020-10-23 22:49:57,013] ({pool-2-thread-2} Logging.scala[logInfo]:54) - Server created on 200.16.29.165:43023
+ INFO [2020-10-23 22:49:57,014] ({pool-2-thread-2} Logging.scala[logInfo]:54) - Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+ INFO [2020-10-23 22:49:57,016] ({pool-2-thread-2} Logging.scala[logInfo]:54) - Registering BlockManager BlockManagerId(driver, 200.16.29.165, 43023, None)
+ INFO [2020-10-23 22:49:57,019] ({dispatcher-event-loop-10} Logging.scala[logInfo]:54) - Registering block manager 200.16.29.165:43023 with 1458.6 MB RAM, BlockManagerId(driver, 200.16.29.165, 43023, None)
+ INFO [2020-10-23 22:49:57,024] ({pool-2-thread-2} Logging.scala[logInfo]:54) - Registered BlockManager BlockManagerId(driver, 200.16.29.165, 43023, None)
+ INFO [2020-10-23 22:49:57,024] ({pool-2-thread-2} Logging.scala[logInfo]:54) - Initialized BlockManager: BlockManagerId(driver, 200.16.29.165, 43023, None)
+ INFO [2020-10-23 22:49:57,159] ({pool-2-thread-2} ContextHandler.java[doStart]:781) - Started o.s.j.s.ServletContextHandler@3d981f2f{/metrics/json,null,AVAILABLE,@Spark}
+ INFO [2020-10-23 22:50:00,235] ({pool-2-thread-2} SparkShims.java[loadShims]:62) - Initializing shims for Spark 2.x
+ INFO [2020-10-23 22:50:00,452] ({pool-2-thread-2} Py4JUtils.java[createGatewayServer]:44) - Launching GatewayServer at 127.0.0.1:40127
+ INFO [2020-10-23 22:50:00,463] ({pool-2-thread-2} PySparkInterpreter.java[createGatewayServerAndStartScript]:265) - pythonExec: python
+ INFO [2020-10-23 22:50:00,471] ({pool-2-thread-2} PySparkInterpreter.java[setupPySparkEnv]:236) - PYTHONPATH: /users/ssulca/diplodatos_bigdata/spark/zeppelin-0.8.2-bin-all/interpreter/spark/pyspark/pyspark.zip:/users/ssulca/diplodatos_bigdata/spark/zeppelin-0.8.2-bin-all/interpreter/spark/pyspark/py4j-0.10.4-src.zip:/users/ssulca/diplodatos_bigdata/spark/zeppelin-0.8.2-bin-all/interpreter/lib/python::/users/ssulca/diplodatos_bigdata/spark/zeppelin-0.8.2-bin-all/local-repo/graphframes/graphframes/0.6.0-spark2.2-s_2.11/graphframes-0.6.0-spark2.2-s_2.11.jar:/users/ssulca/diplodatos_bigdata/spark/zeppelin-0.8.2-bin-all/local-repo/graphframes/graphframes/0.6.0-spark2.2-s_2.11/graphframes-0.6.0-spark2.2-s_2.11.jar:/users/ssulca/diplodatos_bigdata/spark/zeppelin-0.8.2-bin-all/interpreter/spark/pyspark/pyspark.zip:/users/ssulca/diplodatos_bigdata/spark/zeppelin-0.8.2-bin-all/interpreter/spark/pyspark/py4j-0.10.4-src.zip
+ INFO [2020-10-23 22:50:04,281] ({Thread-17} Logging.scala[logInfo]:54) - Block broadcast_0 stored as values in memory (estimated size 225.9 KB, free 1458.4 MB)
+ INFO [2020-10-23 22:50:04,327] ({Thread-17} Logging.scala[logInfo]:54) - Block broadcast_0_piece0 stored as bytes in memory (estimated size 21.4 KB, free 1458.4 MB)
+ INFO [2020-10-23 22:50:04,330] ({dispatcher-event-loop-12} Logging.scala[logInfo]:54) - Added broadcast_0_piece0 in memory on 200.16.29.165:43023 (size: 21.4 KB, free: 1458.6 MB)
+ INFO [2020-10-23 22:50:04,333] ({Thread-17} Logging.scala[logInfo]:54) - Created broadcast 0 from textFile at NativeMethodAccessorImpl.java:0
+ INFO [2020-10-23 22:50:04,409] ({Thread-17} FileInputFormat.java[listStatus]:249) - Total input paths to process : 1
+ INFO [2020-10-23 22:50:04,468] ({pool-2-thread-2} SchedulerFactory.java[jobFinished]:120) - Job 20201023-001936_119304475 finished by scheduler interpreter_1406437594
+ INFO [2020-10-23 22:54:49,969] ({pool-2-thread-2} SchedulerFactory.java[jobStarted]:114) - Job 20171011-153126_91229243 started by scheduler interpreter_1406437594
+ INFO [2020-10-23 22:54:50,031] ({Thread-17} Logging.scala[logInfo]:54) - Starting job: sortBy at <stdin>:2
+ INFO [2020-10-23 22:54:50,045] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Registering RDD 3 (reduceByKey at <stdin>:12)
+ INFO [2020-10-23 22:54:50,047] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Got job 0 (sortBy at <stdin>:2) with 2 output partitions
+ INFO [2020-10-23 22:54:50,047] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Final stage: ResultStage 1 (sortBy at <stdin>:2)
+ INFO [2020-10-23 22:54:50,047] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Parents of final stage: List(ShuffleMapStage 0)
+ INFO [2020-10-23 22:54:50,048] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Missing parents: List(ShuffleMapStage 0)
+ INFO [2020-10-23 22:54:50,052] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Submitting ShuffleMapStage 0 (PairwiseRDD[3] at reduceByKey at <stdin>:12), which has no missing parents
+ INFO [2020-10-23 22:54:50,099] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Block broadcast_1 stored as values in memory (estimated size 9.7 KB, free 1458.3 MB)
+ INFO [2020-10-23 22:54:50,102] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Block broadcast_1_piece0 stored as bytes in memory (estimated size 6.3 KB, free 1458.3 MB)
+ INFO [2020-10-23 22:54:50,103] ({dispatcher-event-loop-13} Logging.scala[logInfo]:54) - Added broadcast_1_piece0 in memory on 200.16.29.165:43023 (size: 6.3 KB, free: 1458.6 MB)
+ INFO [2020-10-23 22:54:50,103] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Created broadcast 1 from broadcast at DAGScheduler.scala:1006
+ INFO [2020-10-23 22:54:50,113] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Submitting 2 missing tasks from ShuffleMapStage 0 (PairwiseRDD[3] at reduceByKey at <stdin>:12) (first 15 tasks are for partitions Vector(0, 1))
+ INFO [2020-10-23 22:54:50,114] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Adding task set 0.0 with 2 tasks
+ INFO [2020-10-23 22:54:50,148] ({dispatcher-event-loop-14} Logging.scala[logInfo]:54) - Starting task 0.0 in stage 0.0 (TID 0, localhost, executor driver, partition 0, PROCESS_LOCAL, 4884 bytes)
+ INFO [2020-10-23 22:54:50,150] ({dispatcher-event-loop-14} Logging.scala[logInfo]:54) - Starting task 1.0 in stage 0.0 (TID 1, localhost, executor driver, partition 1, PROCESS_LOCAL, 4884 bytes)
+ INFO [2020-10-23 22:54:50,157] ({Executor task launch worker for task 0} Logging.scala[logInfo]:54) - Running task 0.0 in stage 0.0 (TID 0)
+ INFO [2020-10-23 22:54:50,158] ({Executor task launch worker for task 1} Logging.scala[logInfo]:54) - Running task 1.0 in stage 0.0 (TID 1)
+ INFO [2020-10-23 22:54:50,217] ({Executor task launch worker for task 0} Logging.scala[logInfo]:54) - Input split: file:/users/ssulca/diplodatos_bigdata/spark/zeppelin-0.8.2-bin-all/README.md:0+662
+ INFO [2020-10-23 22:54:50,217] ({Executor task launch worker for task 1} Logging.scala[logInfo]:54) - Input split: file:/users/ssulca/diplodatos_bigdata/spark/zeppelin-0.8.2-bin-all/README.md:662+663
+ INFO [2020-10-23 22:54:50,853] ({Executor task launch worker for task 1} Logging.scala[logInfo]:54) - Times: total = 452, boot = 437, init = 10, finish = 5
+ INFO [2020-10-23 22:54:50,853] ({Executor task launch worker for task 0} Logging.scala[logInfo]:54) - Times: total = 452, boot = 439, init = 8, finish = 5
+ INFO [2020-10-23 22:54:50,876] ({Executor task launch worker for task 1} Logging.scala[logInfo]:54) - Finished task 1.0 in stage 0.0 (TID 1). 1569 bytes result sent to driver
+ INFO [2020-10-23 22:54:50,876] ({Executor task launch worker for task 0} Logging.scala[logInfo]:54) - Finished task 0.0 in stage 0.0 (TID 0). 1569 bytes result sent to driver
+ INFO [2020-10-23 22:54:50,885] ({task-result-getter-1} Logging.scala[logInfo]:54) - Finished task 0.0 in stage 0.0 (TID 0) in 749 ms on localhost (executor driver) (1/2)
+ INFO [2020-10-23 22:54:50,886] ({task-result-getter-0} Logging.scala[logInfo]:54) - Finished task 1.0 in stage 0.0 (TID 1) in 736 ms on localhost (executor driver) (2/2)
+ INFO [2020-10-23 22:54:50,887] ({task-result-getter-0} Logging.scala[logInfo]:54) - Removed TaskSet 0.0, whose tasks have all completed, from pool 
+ INFO [2020-10-23 22:54:50,891] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - ShuffleMapStage 0 (reduceByKey at <stdin>:12) finished in 0.763 s
+ INFO [2020-10-23 22:54:50,892] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - looking for newly runnable stages
+ INFO [2020-10-23 22:54:50,892] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - running: Set()
+ INFO [2020-10-23 22:54:50,893] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - waiting: Set(ResultStage 1)
+ INFO [2020-10-23 22:54:50,893] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - failed: Set()
+ INFO [2020-10-23 22:54:50,896] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Submitting ResultStage 1 (PythonRDD[6] at sortBy at <stdin>:2), which has no missing parents
+ INFO [2020-10-23 22:54:50,902] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Block broadcast_2 stored as values in memory (estimated size 7.5 KB, free 1458.3 MB)
+ INFO [2020-10-23 22:54:50,904] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Block broadcast_2_piece0 stored as bytes in memory (estimated size 5.0 KB, free 1458.3 MB)
+ INFO [2020-10-23 22:54:50,904] ({dispatcher-event-loop-2} Logging.scala[logInfo]:54) - Added broadcast_2_piece0 in memory on 200.16.29.165:43023 (size: 5.0 KB, free: 1458.6 MB)
+ INFO [2020-10-23 22:54:50,905] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Created broadcast 2 from broadcast at DAGScheduler.scala:1006
+ INFO [2020-10-23 22:54:50,907] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Submitting 2 missing tasks from ResultStage 1 (PythonRDD[6] at sortBy at <stdin>:2) (first 15 tasks are for partitions Vector(0, 1))
+ INFO [2020-10-23 22:54:50,907] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Adding task set 1.0 with 2 tasks
+ INFO [2020-10-23 22:54:50,911] ({dispatcher-event-loop-1} Logging.scala[logInfo]:54) - Starting task 0.0 in stage 1.0 (TID 2, localhost, executor driver, partition 0, ANY, 4621 bytes)
+ INFO [2020-10-23 22:54:50,912] ({dispatcher-event-loop-1} Logging.scala[logInfo]:54) - Starting task 1.0 in stage 1.0 (TID 3, localhost, executor driver, partition 1, ANY, 4621 bytes)
+ INFO [2020-10-23 22:54:50,912] ({Executor task launch worker for task 2} Logging.scala[logInfo]:54) - Running task 0.0 in stage 1.0 (TID 2)
+ INFO [2020-10-23 22:54:50,912] ({Executor task launch worker for task 3} Logging.scala[logInfo]:54) - Running task 1.0 in stage 1.0 (TID 3)
+ INFO [2020-10-23 22:54:50,926] ({Executor task launch worker for task 3} Logging.scala[logInfo]:54) - Getting 2 non-empty blocks out of 2 blocks
+ INFO [2020-10-23 22:54:50,926] ({Executor task launch worker for task 2} Logging.scala[logInfo]:54) - Getting 2 non-empty blocks out of 2 blocks
+ INFO [2020-10-23 22:54:50,928] ({Executor task launch worker for task 2} Logging.scala[logInfo]:54) - Started 0 remote fetches in 5 ms
+ INFO [2020-10-23 22:54:50,928] ({Executor task launch worker for task 3} Logging.scala[logInfo]:54) - Started 0 remote fetches in 5 ms
+ INFO [2020-10-23 22:54:50,956] ({Executor task launch worker for task 3} Logging.scala[logInfo]:54) - Times: total = 10, boot = -234, init = 243, finish = 1
+ INFO [2020-10-23 22:54:50,956] ({Executor task launch worker for task 2} Logging.scala[logInfo]:54) - Times: total = 10, boot = -234, init = 243, finish = 1
+ INFO [2020-10-23 22:54:50,959] ({Executor task launch worker for task 2} Logging.scala[logInfo]:54) - Finished task 0.0 in stage 1.0 (TID 2). 1525 bytes result sent to driver
+ INFO [2020-10-23 22:54:50,959] ({Executor task launch worker for task 3} Logging.scala[logInfo]:54) - Finished task 1.0 in stage 1.0 (TID 3). 1525 bytes result sent to driver
+ INFO [2020-10-23 22:54:50,960] ({task-result-getter-2} Logging.scala[logInfo]:54) - Finished task 0.0 in stage 1.0 (TID 2) in 51 ms on localhost (executor driver) (1/2)
+ INFO [2020-10-23 22:54:50,961] ({task-result-getter-3} Logging.scala[logInfo]:54) - Finished task 1.0 in stage 1.0 (TID 3) in 50 ms on localhost (executor driver) (2/2)
+ INFO [2020-10-23 22:54:50,961] ({task-result-getter-3} Logging.scala[logInfo]:54) - Removed TaskSet 1.0, whose tasks have all completed, from pool 
+ INFO [2020-10-23 22:54:50,962] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - ResultStage 1 (sortBy at <stdin>:2) finished in 0.053 s
+ INFO [2020-10-23 22:54:50,967] ({Thread-17} Logging.scala[logInfo]:54) - Job 0 finished: sortBy at <stdin>:2, took 0.934882 s
+ INFO [2020-10-23 22:54:50,998] ({Thread-17} Logging.scala[logInfo]:54) - Starting job: sortBy at <stdin>:2
+ INFO [2020-10-23 22:54:51,001] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Size of output statuses for shuffle 0 is 159 bytes
+ INFO [2020-10-23 22:54:51,003] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Got job 1 (sortBy at <stdin>:2) with 2 output partitions
+ INFO [2020-10-23 22:54:51,003] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Final stage: ResultStage 3 (sortBy at <stdin>:2)
+ INFO [2020-10-23 22:54:51,003] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Parents of final stage: List(ShuffleMapStage 2)
+ INFO [2020-10-23 22:54:51,003] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Missing parents: List()
+ INFO [2020-10-23 22:54:51,003] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Submitting ResultStage 3 (PythonRDD[7] at sortBy at <stdin>:2), which has no missing parents
+ INFO [2020-10-23 22:54:51,006] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Block broadcast_3 stored as values in memory (estimated size 7.5 KB, free 1458.3 MB)
+ INFO [2020-10-23 22:54:51,007] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Block broadcast_3_piece0 stored as bytes in memory (estimated size 4.9 KB, free 1458.3 MB)
+ INFO [2020-10-23 22:54:51,008] ({dispatcher-event-loop-7} Logging.scala[logInfo]:54) - Added broadcast_3_piece0 in memory on 200.16.29.165:43023 (size: 4.9 KB, free: 1458.6 MB)
+ INFO [2020-10-23 22:54:51,008] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Created broadcast 3 from broadcast at DAGScheduler.scala:1006
+ INFO [2020-10-23 22:54:51,009] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Submitting 2 missing tasks from ResultStage 3 (PythonRDD[7] at sortBy at <stdin>:2) (first 15 tasks are for partitions Vector(0, 1))
+ INFO [2020-10-23 22:54:51,009] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Adding task set 3.0 with 2 tasks
+ INFO [2020-10-23 22:54:51,010] ({dispatcher-event-loop-8} Logging.scala[logInfo]:54) - Starting task 0.0 in stage 3.0 (TID 4, localhost, executor driver, partition 0, ANY, 4621 bytes)
+ INFO [2020-10-23 22:54:51,010] ({dispatcher-event-loop-8} Logging.scala[logInfo]:54) - Starting task 1.0 in stage 3.0 (TID 5, localhost, executor driver, partition 1, ANY, 4621 bytes)
+ INFO [2020-10-23 22:54:51,011] ({Executor task launch worker for task 4} Logging.scala[logInfo]:54) - Running task 0.0 in stage 3.0 (TID 4)
+ INFO [2020-10-23 22:54:51,011] ({Executor task launch worker for task 5} Logging.scala[logInfo]:54) - Running task 1.0 in stage 3.0 (TID 5)
+ INFO [2020-10-23 22:54:51,015] ({Executor task launch worker for task 4} Logging.scala[logInfo]:54) - Getting 2 non-empty blocks out of 2 blocks
+ INFO [2020-10-23 22:54:51,015] ({Executor task launch worker for task 4} Logging.scala[logInfo]:54) - Started 0 remote fetches in 0 ms
+ INFO [2020-10-23 22:54:51,015] ({Executor task launch worker for task 5} Logging.scala[logInfo]:54) - Getting 2 non-empty blocks out of 2 blocks
+ INFO [2020-10-23 22:54:51,015] ({Executor task launch worker for task 5} Logging.scala[logInfo]:54) - Started 0 remote fetches in 0 ms
+ INFO [2020-10-23 22:54:51,026] ({Executor task launch worker for task 4} Logging.scala[logInfo]:54) - Times: total = 5, boot = -58, init = 62, finish = 1
+ INFO [2020-10-23 22:54:51,027] ({Executor task launch worker for task 4} Logging.scala[logInfo]:54) - Finished task 0.0 in stage 3.0 (TID 4). 1601 bytes result sent to driver
+ INFO [2020-10-23 22:54:51,029] ({task-result-getter-1} Logging.scala[logInfo]:54) - Finished task 0.0 in stage 3.0 (TID 4) in 19 ms on localhost (executor driver) (1/2)
+ INFO [2020-10-23 22:54:51,030] ({Executor task launch worker for task 5} Logging.scala[logInfo]:54) - Times: total = 5, boot = -58, init = 62, finish = 1
+ INFO [2020-10-23 22:54:51,031] ({Executor task launch worker for task 5} Logging.scala[logInfo]:54) - Finished task 1.0 in stage 3.0 (TID 5). 1605 bytes result sent to driver
+ INFO [2020-10-23 22:54:51,032] ({task-result-getter-0} Logging.scala[logInfo]:54) - Finished task 1.0 in stage 3.0 (TID 5) in 22 ms on localhost (executor driver) (2/2)
+ INFO [2020-10-23 22:54:51,032] ({task-result-getter-0} Logging.scala[logInfo]:54) - Removed TaskSet 3.0, whose tasks have all completed, from pool 
+ INFO [2020-10-23 22:54:51,033] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - ResultStage 3 (sortBy at <stdin>:2) finished in 0.024 s
+ INFO [2020-10-23 22:54:51,033] ({Thread-17} Logging.scala[logInfo]:54) - Job 1 finished: sortBy at <stdin>:2, took 0.034982 s
+ INFO [2020-10-23 22:54:51,071] ({Thread-17} Logging.scala[logInfo]:54) - Starting job: collect at <stdin>:4
+ INFO [2020-10-23 22:54:51,073] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Registering RDD 9 (sortBy at <stdin>:2)
+ INFO [2020-10-23 22:54:51,073] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Got job 2 (collect at <stdin>:4) with 2 output partitions
+ INFO [2020-10-23 22:54:51,073] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Final stage: ResultStage 6 (collect at <stdin>:4)
+ INFO [2020-10-23 22:54:51,073] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Parents of final stage: List(ShuffleMapStage 5)
+ INFO [2020-10-23 22:54:51,073] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Missing parents: List(ShuffleMapStage 5)
+ INFO [2020-10-23 22:54:51,074] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Submitting ShuffleMapStage 5 (PairwiseRDD[9] at sortBy at <stdin>:2), which has no missing parents
+ INFO [2020-10-23 22:54:51,076] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Block broadcast_4 stored as values in memory (estimated size 8.3 KB, free 1458.3 MB)
+ INFO [2020-10-23 22:54:51,077] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Block broadcast_4_piece0 stored as bytes in memory (estimated size 5.5 KB, free 1458.3 MB)
+ INFO [2020-10-23 22:54:51,078] ({dispatcher-event-loop-13} Logging.scala[logInfo]:54) - Added broadcast_4_piece0 in memory on 200.16.29.165:43023 (size: 5.5 KB, free: 1458.6 MB)
+ INFO [2020-10-23 22:54:51,078] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Created broadcast 4 from broadcast at DAGScheduler.scala:1006
+ INFO [2020-10-23 22:54:51,079] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Submitting 2 missing tasks from ShuffleMapStage 5 (PairwiseRDD[9] at sortBy at <stdin>:2) (first 15 tasks are for partitions Vector(0, 1))
+ INFO [2020-10-23 22:54:51,079] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Adding task set 5.0 with 2 tasks
+ INFO [2020-10-23 22:54:51,080] ({dispatcher-event-loop-14} Logging.scala[logInfo]:54) - Starting task 0.0 in stage 5.0 (TID 6, localhost, executor driver, partition 0, ANY, 4610 bytes)
+ INFO [2020-10-23 22:54:51,081] ({dispatcher-event-loop-14} Logging.scala[logInfo]:54) - Starting task 1.0 in stage 5.0 (TID 7, localhost, executor driver, partition 1, ANY, 4610 bytes)
+ INFO [2020-10-23 22:54:51,081] ({Executor task launch worker for task 6} Logging.scala[logInfo]:54) - Running task 0.0 in stage 5.0 (TID 6)
+ INFO [2020-10-23 22:54:51,081] ({Executor task launch worker for task 7} Logging.scala[logInfo]:54) - Running task 1.0 in stage 5.0 (TID 7)
+ INFO [2020-10-23 22:54:51,087] ({Executor task launch worker for task 6} Logging.scala[logInfo]:54) - Getting 2 non-empty blocks out of 2 blocks
+ INFO [2020-10-23 22:54:51,087] ({Executor task launch worker for task 7} Logging.scala[logInfo]:54) - Getting 2 non-empty blocks out of 2 blocks
+ INFO [2020-10-23 22:54:51,087] ({Executor task launch worker for task 6} Logging.scala[logInfo]:54) - Started 0 remote fetches in 0 ms
+ INFO [2020-10-23 22:54:51,087] ({Executor task launch worker for task 7} Logging.scala[logInfo]:54) - Started 0 remote fetches in 0 ms
+ INFO [2020-10-23 22:54:51,142] ({Executor task launch worker for task 7} Logging.scala[logInfo]:54) - Times: total = 43, boot = -63, init = 105, finish = 1
+ INFO [2020-10-23 22:54:51,142] ({Executor task launch worker for task 6} Logging.scala[logInfo]:54) - Times: total = 44, boot = -62, init = 105, finish = 1
+ INFO [2020-10-23 22:54:51,145] ({Executor task launch worker for task 6} Logging.scala[logInfo]:54) - Finished task 0.0 in stage 5.0 (TID 6). 1698 bytes result sent to driver
+ INFO [2020-10-23 22:54:51,146] ({task-result-getter-2} Logging.scala[logInfo]:54) - Finished task 0.0 in stage 5.0 (TID 6) in 66 ms on localhost (executor driver) (1/2)
+ INFO [2020-10-23 22:54:51,147] ({Executor task launch worker for task 7} Logging.scala[logInfo]:54) - Finished task 1.0 in stage 5.0 (TID 7). 1698 bytes result sent to driver
+ INFO [2020-10-23 22:54:51,148] ({task-result-getter-3} Logging.scala[logInfo]:54) - Finished task 1.0 in stage 5.0 (TID 7) in 68 ms on localhost (executor driver) (2/2)
+ INFO [2020-10-23 22:54:51,148] ({task-result-getter-3} Logging.scala[logInfo]:54) - Removed TaskSet 5.0, whose tasks have all completed, from pool 
+ INFO [2020-10-23 22:54:51,148] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - ShuffleMapStage 5 (sortBy at <stdin>:2) finished in 0.068 s
+ INFO [2020-10-23 22:54:51,148] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - looking for newly runnable stages
+ INFO [2020-10-23 22:54:51,149] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - running: Set()
+ INFO [2020-10-23 22:54:51,149] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - waiting: Set(ResultStage 6)
+ INFO [2020-10-23 22:54:51,149] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - failed: Set()
+ INFO [2020-10-23 22:54:51,149] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Submitting ResultStage 6 (PythonRDD[12] at collect at <stdin>:4), which has no missing parents
+ INFO [2020-10-23 22:54:51,151] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Block broadcast_5 stored as values in memory (estimated size 6.6 KB, free 1458.3 MB)
+ INFO [2020-10-23 22:54:51,152] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Block broadcast_5_piece0 stored as bytes in memory (estimated size 4.3 KB, free 1458.3 MB)
+ INFO [2020-10-23 22:54:51,153] ({dispatcher-event-loop-0} Logging.scala[logInfo]:54) - Added broadcast_5_piece0 in memory on 200.16.29.165:43023 (size: 4.3 KB, free: 1458.6 MB)
+ INFO [2020-10-23 22:54:51,153] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Created broadcast 5 from broadcast at DAGScheduler.scala:1006
+ INFO [2020-10-23 22:54:51,155] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Submitting 2 missing tasks from ResultStage 6 (PythonRDD[12] at collect at <stdin>:4) (first 15 tasks are for partitions Vector(0, 1))
+ INFO [2020-10-23 22:54:51,155] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - Adding task set 6.0 with 2 tasks
+ INFO [2020-10-23 22:54:51,155] ({dispatcher-event-loop-19} Logging.scala[logInfo]:54) - Starting task 0.0 in stage 6.0 (TID 8, localhost, executor driver, partition 0, ANY, 4621 bytes)
+ INFO [2020-10-23 22:54:51,156] ({dispatcher-event-loop-19} Logging.scala[logInfo]:54) - Starting task 1.0 in stage 6.0 (TID 9, localhost, executor driver, partition 1, ANY, 4621 bytes)
+ INFO [2020-10-23 22:54:51,156] ({Executor task launch worker for task 9} Logging.scala[logInfo]:54) - Running task 1.0 in stage 6.0 (TID 9)
+ INFO [2020-10-23 22:54:51,156] ({Executor task launch worker for task 8} Logging.scala[logInfo]:54) - Running task 0.0 in stage 6.0 (TID 8)
+ INFO [2020-10-23 22:54:51,159] ({Executor task launch worker for task 8} Logging.scala[logInfo]:54) - Getting 2 non-empty blocks out of 2 blocks
+ INFO [2020-10-23 22:54:51,159] ({Executor task launch worker for task 9} Logging.scala[logInfo]:54) - Getting 2 non-empty blocks out of 2 blocks
+ INFO [2020-10-23 22:54:51,159] ({Executor task launch worker for task 8} Logging.scala[logInfo]:54) - Started 0 remote fetches in 0 ms
+ INFO [2020-10-23 22:54:51,159] ({Executor task launch worker for task 9} Logging.scala[logInfo]:54) - Started 0 remote fetches in 0 ms
+ INFO [2020-10-23 22:54:51,165] ({Executor task launch worker for task 8} Logging.scala[logInfo]:54) - Times: total = 2, boot = -21, init = 23, finish = 0
+ INFO [2020-10-23 22:54:51,167] ({Executor task launch worker for task 8} Logging.scala[logInfo]:54) - Finished task 0.0 in stage 6.0 (TID 8). 1787 bytes result sent to driver
+ INFO [2020-10-23 22:54:51,167] ({Executor task launch worker for task 9} Logging.scala[logInfo]:54) - Times: total = 2, boot = -24, init = 25, finish = 1
+ INFO [2020-10-23 22:54:51,168] ({task-result-getter-1} Logging.scala[logInfo]:54) - Finished task 0.0 in stage 6.0 (TID 8) in 13 ms on localhost (executor driver) (1/2)
+ INFO [2020-10-23 22:54:51,168] ({Executor task launch worker for task 9} Logging.scala[logInfo]:54) - Finished task 1.0 in stage 6.0 (TID 9). 3590 bytes result sent to driver
+ INFO [2020-10-23 22:54:51,169] ({task-result-getter-0} Logging.scala[logInfo]:54) - Finished task 1.0 in stage 6.0 (TID 9) in 13 ms on localhost (executor driver) (2/2)
+ INFO [2020-10-23 22:54:51,169] ({task-result-getter-0} Logging.scala[logInfo]:54) - Removed TaskSet 6.0, whose tasks have all completed, from pool 
+ INFO [2020-10-23 22:54:51,169] ({dag-scheduler-event-loop} Logging.scala[logInfo]:54) - ResultStage 6 (collect at <stdin>:4) finished in 0.014 s
+ INFO [2020-10-23 22:54:51,170] ({Thread-17} Logging.scala[logInfo]:54) - Job 2 finished: collect at <stdin>:4, took 0.097854 s
+ INFO [2020-10-23 22:54:51,182] ({pool-2-thread-2} SchedulerFactory.java[jobFinished]:120) - Job 20171011-153126_91229243 finished by scheduler interpreter_1406437594
+ INFO [2020-10-23 22:56:08,958] ({pool-2-thread-4} SchedulerFactory.java[jobStarted]:114) - Job 20201023-225534_1135842732 started by scheduler interpreter_1406437594
+ INFO [2020-10-23 22:56:08,984] ({Thread-17} Logging.scala[logInfo]:54) - Block broadcast_6 stored as values in memory (estimated size 226.0 KB, free 1458.1 MB)
+ INFO [2020-10-23 22:56:08,996] ({Thread-17} Logging.scala[logInfo]:54) - Block broadcast_6_piece0 stored as bytes in memory (estimated size 21.4 KB, free 1458.1 MB)
+ INFO [2020-10-23 22:56:08,998] ({dispatcher-event-loop-2} Logging.scala[logInfo]:54) - Added broadcast_6_piece0 in memory on 200.16.29.165:43023 (size: 21.4 KB, free: 1458.5 MB)
+ INFO [2020-10-23 22:56:08,999] ({Thread-17} Logging.scala[logInfo]:54) - Created broadcast 6 from textFile at NativeMethodAccessorImpl.java:0
+ INFO [2020-10-23 22:56:09,203] ({Thread-17} FileInputFormat.java[listStatus]:249) - Total input paths to process : 62
+ INFO [2020-10-23 22:56:09,236] ({pool-2-thread-4} SchedulerFactory.java[jobFinished]:120) - Job 20201023-225534_1135842732 finished by scheduler interpreter_1406437594
+ INFO [2020-10-23 22:56:14,790] ({pool-2-thread-2} SchedulerFactory.java[jobStarted]:114) - Job 20201023-225534_1135842732 started by scheduler interpreter_1406437594
+ INFO [2020-10-23 22:56:14,799] ({Thread-17} Logging.scala[logInfo]:54) - Block broadcast_7 stored as values in memory (estimated size 226.0 KB, free 1457.8 MB)
+ INFO [2020-10-23 22:56:14,810] ({Thread-17} Logging.scala[logInfo]:54) - Block broadcast_7_piece0 stored as bytes in memory (estimated size 21.4 KB, free 1457.8 MB)
+ INFO [2020-10-23 22:56:14,811] ({dispatcher-event-loop-4} Logging.scala[logInfo]:54) - Added broadcast_7_piece0 in memory on 200.16.29.165:43023 (size: 21.4 KB, free: 1458.5 MB)
+ INFO [2020-10-23 22:56:14,812] ({Thread-17} Logging.scala[logInfo]:54) - Created broadcast 7 from textFile at NativeMethodAccessorImpl.java:0
+ INFO [2020-10-23 22:56:14,942] ({Thread-17} FileInputFormat.java[listStatus]:249) - Total input paths to process : 62
+ INFO [2020-10-23 22:56:14,975] ({pool-2-thread-2} SchedulerFactory.java[jobFinished]:120) - Job 20201023-225534_1135842732 finished by scheduler interpreter_1406437594
+ INFO [2020-10-23 22:56:16,963] ({pool-2-thread-5} SchedulerFactory.java[jobStarted]:114) - Job 20201023-225534_1135842732 started by scheduler interpreter_1406437594
+ INFO [2020-10-23 22:56:16,971] ({Thread-17} Logging.scala[logInfo]:54) - Block broadcast_8 stored as values in memory (estimated size 226.0 KB, free 1457.6 MB)
+ INFO [2020-10-23 22:56:16,982] ({Thread-17} Logging.scala[logInfo]:54) - Block broadcast_8_piece0 stored as bytes in memory (estimated size 21.4 KB, free 1457.6 MB)
+ INFO [2020-10-23 22:56:16,982] ({dispatcher-event-loop-6} Logging.scala[logInfo]:54) - Added broadcast_8_piece0 in memory on 200.16.29.165:43023 (size: 21.4 KB, free: 1458.5 MB)
+ INFO [2020-10-23 22:56:16,983] ({Thread-17} Logging.scala[logInfo]:54) - Created broadcast 8 from textFile at NativeMethodAccessorImpl.java:0
+ INFO [2020-10-23 22:56:17,118] ({Thread-17} FileInputFormat.java[listStatus]:249) - Total input paths to process : 62
+ INFO [2020-10-23 22:56:17,155] ({pool-2-thread-5} SchedulerFactory.java[jobFinished]:120) - Job 20201023-225534_1135842732 finished by scheduler interpreter_1406437594
+ INFO [2020-10-23 22:57:33,022] ({Thread-5} Logging.scala[logInfo]:54) - Invoking stop() from shutdown hook
+ INFO [2020-10-23 22:57:33,027] ({Thread-5} AbstractConnector.java[doStop]:310) - Stopped Spark@4bcf1c04{HTTP/1.1,[http/1.1]}{0.0.0.0:4041}
+ INFO [2020-10-23 22:57:33,030] ({Thread-5} Logging.scala[logInfo]:54) - Stopped Spark web UI at http://200.16.29.165:4041
+ INFO [2020-10-23 22:57:33,040] ({dispatcher-event-loop-6} Logging.scala[logInfo]:54) - MapOutputTrackerMasterEndpoint stopped!
+ INFO [2020-10-23 22:57:33,049] ({Thread-5} Logging.scala[logInfo]:54) - MemoryStore cleared
+ INFO [2020-10-23 22:57:33,050] ({Thread-5} Logging.scala[logInfo]:54) - BlockManager stopped
+ INFO [2020-10-23 22:57:33,050] ({Thread-5} Logging.scala[logInfo]:54) - BlockManagerMaster stopped
+ INFO [2020-10-23 22:57:33,052] ({dispatcher-event-loop-10} Logging.scala[logInfo]:54) - OutputCommitCoordinator stopped!
+ INFO [2020-10-23 22:57:33,069] ({Thread-5} Logging.scala[logInfo]:54) - Successfully stopped SparkContext
+ INFO [2020-10-23 22:57:33,069] ({Thread-5} Logging.scala[logInfo]:54) - Shutdown hook called
+ INFO [2020-10-23 22:57:33,070] ({Thread-5} Logging.scala[logInfo]:54) - Deleting directory /tmp/spark-e531b4b9-ced6-4320-8b44-667e1c4ed64f/pyspark-f6013617-25a0-46aa-8212-3e815465b462
+ INFO [2020-10-23 22:57:33,070] ({Thread-5} Logging.scala[logInfo]:54) - Deleting directory /tmp/spark-e531b4b9-ced6-4320-8b44-667e1c4ed64f
