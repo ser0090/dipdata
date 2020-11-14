@@ -14,6 +14,34 @@ Diplomatura en Ciencia de Datos, Aprendizaje Automático y sus Aplicaciones
 * [Introduction to Machine Learning](introml/README.md)
 * [Supervised Learning](supervised/README.md)
 * [Unsupervised Learning](unsupervised/README.md)
+* [Distributed Computing](distributed/README.md)
+
+
+```sh
+├── analisisvis
+│   ├── data
+│   └── notebooks
+├── curacion
+│   ├── input
+│   ├── notebooks
+│   ├── output
+│   └── queries
+├── distributed
+│   ├── bin
+│   ├── conf
+│   ├── docs
+│   ├── inputs
+│   └── notebooks
+├── doc
+├── introml
+│   └── notebooks
+├── scripts
+├── supervised
+│   └── notebooks
+└── unsupervised
+    └── notebooks
+```
+
 
 ### Data visualization
 Data analytics and visualization on The [Human Freedom Index - 2019](https://www.cato.org/human-freedom-index-new)
@@ -47,6 +75,9 @@ Clustering using
  * `mean shift`
  * [Notebook](unsupervised/notebooks/clustering_fifa_20.ipynb)
  
+### Distributed Computing
+Distributed computing in big data using `pyspark` and `graphframe`
+
  
 ## License
 Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
