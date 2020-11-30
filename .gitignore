@@ -137,3 +137,6 @@ dmypy.json
 *.csv
 *.pickle
 iml/
+data/
+ds/
+zeppelin/
