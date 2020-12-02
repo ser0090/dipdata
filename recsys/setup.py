@@ -21,6 +21,8 @@ setup(
         'seaborn',
         'scikit-learn',
         'scikit-surprise',
-        'rise'
+        'rise',
+        'tqdm',
+        'ipywidgets',
     ]
 )
