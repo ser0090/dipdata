@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "curacion"
+version = "0.1.0"
+description = ""
+authors = ["ssulca"]
+
+[tool.poetry.dependencies]
+python = "^3.7.1"
+ftfy = "5.5"
+networkx = "^2.5"
+feedparser = "^6.0.2"
+slugify = "^0.0.1"
+scikit-learn = "^0.24.0"
+pandas = "^1.2.0"
+numpy = "^1.19.4"
+matplotlib = "^3.3.3"
+seaborn = "^0.11.1"
+jupyterlab = "^3.0.0"
+bs4 = "^0.0.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
