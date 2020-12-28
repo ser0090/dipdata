@@ -140,3 +140,6 @@ iml/
 data/
 ds/
 zeppelin/
+
+# poetry
+poetry.lock
