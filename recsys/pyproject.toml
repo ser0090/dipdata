@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "recsys"
+version = "0.1.0"
+description = ""
+authors = ["ssulca"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+numpy = "^1.19.4"
+pandas = "^1.2.0"
+matplotlib = "^3.3.3"
+seaborn = "^0.11.1"
+scikit-learn = "^0.24.0"
+scikit-surprise = "^1.1.1"
+tqdm = "^4.55.0"
+jupyterlab = "^3.0.0"
+ipywidgets = "^7.6.2"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
